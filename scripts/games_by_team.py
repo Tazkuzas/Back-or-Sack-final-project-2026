@@ -72,6 +72,17 @@ team_games = team_games.sort_values(
 team_games["position"] = team_games.groupby(["league", "season", "round"]).cumcount() + 1
 
 
+#odds
+
+p_win = 1 / team_games["odds_win"]
+p_draw = 1 / team_games["odds_draw"]
+p_loss = 1 / team_games["odds_loss"]
+
+total = p_win + p_draw + p_loss
+
+team_games["exp_points"] = (3 * p_win + 1 * p_draw) / total
+team_games["points_vs_exp"] = team_games["points"] - team_games["exp_points"]
+
 
 
 
