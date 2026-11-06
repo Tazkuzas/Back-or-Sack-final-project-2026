@@ -80,8 +80,8 @@ p_loss = 1 / team_games["odds_loss"]
 
 total = p_win + p_draw + p_loss
 
-team_games["exp_points"] = (3 * p_win + 1 * p_draw) / total
-team_games["points_vs_exp"] = team_games["points"] - team_games["exp_points"]
+team_games["exp_points"] = round((3 * p_win + 1 * p_draw) / total, ndigits=3)
+team_games["points_vs_exp"] = round(team_games["points"] - team_games["exp_points"], ndigits=3)
 
 
 
