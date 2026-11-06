@@ -28,7 +28,7 @@ away = pd.DataFrame({
     "date": data["date"],
     "team": data["away_team"],
     "opponent": data["home_team"],
-    "home": 1,
+    "home": 0,
     "goals_for": data["away_goals"],
     "goals_against": data["home_goals"],
     "odds_win": data["odds_away"],
