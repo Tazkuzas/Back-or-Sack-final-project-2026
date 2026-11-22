@@ -46,7 +46,6 @@ for league, folder in LEAGUES.items():
 
 matches = pd.concat(all_matches, ignore_index=True)
 
-print(matches.shape)
 
 #normal date
 matches["date"] = pd.to_datetime(matches["date"], format="%d/%m/%Y")
