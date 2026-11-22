@@ -45,7 +45,7 @@ def prepare_donors(df: pd.DataFrame, team: str, season: int) -> pd.DataFrame:
 def league_sdid(league, outcome_var) -> dict:
     seasons = [2122, 2223, 2324, 2425, 2526]
     prepared = prepare_panel(league)
-    results = {}
+    raw_results = {}
     for season in seasons:
 
         treated_teams = prepared.loc[
@@ -71,11 +71,11 @@ def league_sdid(league, outcome_var) -> dict:
 
             # estimator.error(result, Placebo())
             
-            results[target_unit] = result
-            estimator.plot(result)
+            raw_results[target_unit] = result
+            # estimator.plot(result)
             print(result.summary(title=target_unit))
 
-    return results
+    return raw_results
 
 sdid_SA = league_sdid("SA", "points")
 sdid_PL = league_sdid("PL", "points")
