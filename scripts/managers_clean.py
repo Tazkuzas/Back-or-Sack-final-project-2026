@@ -88,7 +88,7 @@ unit = ["team", "season", "league"]
 is_new_spell = (
     team_games_complete["team_manager"] != team_games_complete.groupby(unit)["team_manager"].shift(1)
 )
-# Number each spell 1, 2, 3... within each team-season-league
+# Number each spell within each team-season-league
 
 spell_num = is_new_spell.groupby([team_games_complete[col] for col in unit]).cumsum()
 total_spells = spell_num.groupby([team_games_complete[col] for col in unit]).transform("max")
