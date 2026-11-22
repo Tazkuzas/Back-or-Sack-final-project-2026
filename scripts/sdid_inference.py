@@ -8,7 +8,7 @@ def prepare_panel(league: str) -> pd.DataFrame:
     df = all_games[all_games["league"] == league].copy()
     df = df[df["total_stints"] <= 2]
     min_stint = df.groupby(["team", "season"])["stint_length"].transform("min")
-    df = df[min_stint >= 4]
+    df = df[min_stint >= 6]
     df["unit_id"] = df["team"] + "_" + df["season"].astype(str)
     
     return df.reset_index(drop=True)
