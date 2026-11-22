@@ -26,10 +26,10 @@ def prepare_donors(df: pd.DataFrame, team: str, season: int) -> pd.DataFrame:
     
     return donor_pool
 
-def league_sdid(league, outcome_var) -> dict:
+def league_sdid(league, outcome_var) -> list[dict]:
     seasons = [2122, 2223, 2324, 2425, 2526]
     prepared = prepare_panel(league)
-    raw_results = {}
+    rows = []
     for season in seasons:
 
         treated_teams = prepared.loc[
@@ -45,7 +45,12 @@ def league_sdid(league, outcome_var) -> dict:
             sub_df = pd.concat([donors, treated_df], ignore_index=True)
 
             sub_df["ever_treated"] = (sub_df["unit_id"] == target_unit)
-            post_rounds = treated_df.loc[treated_df["treated"] == 1, "round"].tolist()
+
+            post_df = treated_df[treated_df["treated"] == 1]
+            post_rounds = post_df["round"].tolist()
+            total_games = int(treated_df["total_games"].iloc[0])
+            n_post_games = len(post_rounds)
+            n_pre_games = total_games - n_post_games
 
             sdid = SyntheticDiD(variance_method="placebo", seed=251)
             result = sdid.fit(
@@ -57,15 +62,40 @@ def league_sdid(league, outcome_var) -> dict:
                 post_periods = post_rounds
             )
             
-            raw_results[target_unit] = result
-            print(raw_results)
+            rows.append({
+                            "unit_id": target_unit,
+                            "league": league,
+                            "season": int(season),
+                            "team": team,
+                            "att": result.att,
+                            "se": result.se,
+                            "p_value": result.p_value,
+                            "ci_low": result.att - 1.96 * result.se,
+                            "ci_high": result.att + 1.96 * result.se,
+                            "sacking_round": int(post_df["round"].min()),
+                            "n_pre_games": n_pre_games,
+                            "n_post_games": n_post_games,
+                            "total_games": total_games,
+                            "n_donors": donors["unit_id"].nunique(),
+                            "pre_fit_rmse": result.pre_treatment_fit,
+                            "pre_fit_placebo_p": result.pre_fit_placebo_pvalue,
+                            "pre_fit_ok": result.pre_fit_placebo_pvalue > 0.05,
+                        })
+    return rows
 
-    return raw_results
 
-sdid_SA = league_sdid("SA", "points")
-sdid_PL = league_sdid("PL", "points")
-sdid_L1 = league_sdid("L1", "points")
-sdid_BL = league_sdid("BL", "points")
-sdid_LL = league_sdid("LL", "points")
+def sdid_by_metric(metric):
+    leagues = ["SA", "PL", "L1", "LL", "BL"]
+    league_rows = []
 
+    for league in leagues:
+        lsdid = league_sdid(league, metric)
+        league_rows.extend(lsdid)
 
+    return league_rows
+
+sdid_results_points = pd.DataFrame(sdid_by_metric("points"))
+sdid_results_points.to_csv("../data/processed/sdid_results_points.csv", index=False)
+
+sdid_results_gd = pd.DataFrame(sdid_by_metric("goal_diff"))
+sdid_results_gd.to_csv("../data/processed/sdid_results_goal_diff.csv", index=False)
