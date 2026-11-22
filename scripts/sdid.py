@@ -18,9 +18,7 @@ az_solver.func_simple_sparsify = _writable_sparsify
 # here, this fix ends
 
 
-
 all_games = pd.read_csv("../data/processed/team_games_manager.csv")
-
 
 def prepare_panel(league: str) -> pd.DataFrame:
     df = all_games[all_games["league"] == league].copy()
@@ -43,7 +41,6 @@ def prepare_donors(df: pd.DataFrame, team: str, season: int) -> pd.DataFrame:
     ].reset_index(drop=True)
     
     return donor_pool
-
 
 def league_sdid(league, outcome_var) -> dict:
     seasons = [2122, 2223, 2324, 2425, 2526]
@@ -85,5 +82,4 @@ sdid_L1 = league_sdid("L1", "points")
 sdid_BL = league_sdid("BL", "points")
 sdid_LL = league_sdid("LL", "points")
 
-type(sdid_SA)
 
