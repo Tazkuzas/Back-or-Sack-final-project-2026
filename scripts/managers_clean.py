@@ -80,8 +80,8 @@ team_games_complete["team_manager"] = np.where(
 )
 
 team_games_complete = team_games_complete.sort_values(["team", "season", "league", "date"]).reset_index(drop=True)
-team_games_complete["matchday"] = team_games_complete.groupby(["team", "season", "league"]).cumcount() + 1
-team_games_complete["total_games"] = team_games_complete.groupby(["team", "season", "league"])["matchday"].transform("count")
+team_games_complete["round"] = team_games_complete.groupby(["team", "season", "league"]).cumcount() + 1
+team_games_complete["total_games"] = team_games_complete.groupby(["team", "season", "league"])["round"].transform("count")
 
 unit = ["team", "season", "league"]
 
@@ -107,7 +107,7 @@ team_games_complete["manager_change"] = (
 team_games_complete["treated"] = team_games_complete.groupby(unit)["manager_change"].cummax()
 
 team_games_complete["stint_id"] = team_games_complete.groupby(unit)["manager_change"].cumsum() + 1
-team_games_complete["stint_length"] = team_games_complete.groupby(unit + ["stint_id"])["matchday"].transform("count")
+team_games_complete["stint_length"] = team_games_complete.groupby(unit + ["stint_id"])["round"].transform("count")
 team_games_complete["total_stints"] = team_games_complete.groupby(unit)["stint_id"].transform("max")
 
 team_games_complete.to_csv("../data/processed/team_games_manager.csv", index = False)
