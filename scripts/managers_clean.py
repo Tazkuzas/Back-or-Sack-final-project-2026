@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-from pathlib import Path
 from rapidfuzz import fuzz, process
 
 clubs = pd.read_csv("../data/raw/managerial_data/clubs.csv")
@@ -30,7 +29,6 @@ manual_alias = {
     "Man City": "Manchester City",
     "Man United": "Manchester United",
     "Milan": "AC Milan",
-    
 }
 
 alias = dict()
@@ -59,7 +57,6 @@ home_fixtures = set(
     zip(games["date"], games["home_club_id"], games["away_club_id"])
 )
 
-# Prüfen, ob (date, team_id, opp_id) genau so als Heimspiel in games existiert -> 1, sonst 0
 team_games_new["home"] = [
     1 if (d, t, o) in home_fixtures else 0
     for d, t, o in zip(team_games_new["date"], team_games_new["team_id"], team_games_new["opp_id"])
@@ -75,4 +72,44 @@ team_games_complete = pd.merge(
     on=["date", "home_club_id", "away_club_id"],
     how="left"
 )
+
+team_games_complete["team_manager"] = np.where(
+    team_games_complete["home"],
+    team_games_complete["home_club_manager_name"],
+    team_games_complete["away_club_manager_name"]
+)
+
+team_games_complete = team_games_complete.sort_values(["team", "season", "league", "date"]).reset_index(drop=True)
+team_games_complete["matchday"] = team_games_complete.groupby(["team", "season", "league"]).cumcount() + 1
+team_games_complete["total_games"] = team_games_complete.groupby(["team", "season", "league"])["matchday"].transform("count")
+
+unit = ["team", "season", "league"]
+
+is_new_spell = (
+    team_games_complete["team_manager"] != team_games_complete.groupby(unit)["team_manager"].shift(1)
+)
+# Number each spell 1, 2, 3... within each team-season-league
+
+spell_num = is_new_spell.groupby([team_games_complete[col] for col in unit]).cumsum()
+total_spells = spell_num.groupby([team_games_complete[col] for col in unit]).transform("max")
+spell_games = team_games_complete.groupby(unit + [spell_num])["team_manager"].transform("count")
+clean_manager = team_games_complete["team_manager"].mask((spell_games < 3) & (spell_num > 1))
+
+team_games_complete["effective_manager"] = clean_manager
+team_games_complete["effective_manager"] = (
+    team_games_complete.groupby(unit)["effective_manager"].ffill()
+)
+
+prev_manager = team_games_complete.groupby(unit)["effective_manager"].shift(1)
+team_games_complete["manager_change"] = (
+    prev_manager.notna() & (team_games_complete["effective_manager"] != prev_manager)
+).astype(int)
+team_games_complete["treated"] = team_games_complete.groupby(unit)["manager_change"].cummax()
+
+team_games_complete["stint_id"] = team_games_complete.groupby(unit)["manager_change"].cumsum() + 1
+team_games_complete["stint_length"] = team_games_complete.groupby(unit + ["stint_id"])["matchday"].transform("count")
+team_games_complete["total_stints"] = team_games_complete.groupby(unit)["stint_id"].transform("max")
+
 team_games_complete.to_csv("../data/processed/team_games_manager.csv", index = False)
+
+print(team_games_complete["total_games"].unique())
