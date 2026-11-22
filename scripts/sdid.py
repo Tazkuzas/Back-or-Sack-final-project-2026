@@ -72,6 +72,7 @@ def league_sdid(league, outcome_var) -> dict:
             # estimator.error(result, Placebo())
             
             results[target_unit] = result
+            estimator.plot(result)
             print(result.summary(title=target_unit))
 
     return results

@@ -80,7 +80,7 @@ team_games_complete["team_manager"] = np.where(
 )
 
 team_games_complete = team_games_complete.sort_values(["team", "season", "league", "date"]).reset_index(drop=True)
-team_games_complete["round"] = team_games_complete.groupby(["team", "season", "league"]).cumcount() + 1
+#team_games_complete["round"] = team_games_complete.groupby(["team", "season", "league"]).cumcount() + 1
 team_games_complete["total_games"] = team_games_complete.groupby(["team", "season", "league"])["round"].transform("count")
 
 unit = ["team", "season", "league"]
