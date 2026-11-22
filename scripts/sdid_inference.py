@@ -47,7 +47,7 @@ def league_sdid(league, outcome_var) -> dict:
             sub_df["ever_treated"] = (sub_df["unit_id"] == target_unit)
             post_rounds = treated_df.loc[treated_df["treated"] == 1, "round"].tolist()
 
-            sdid = SyntheticDiD()
+            sdid = SyntheticDiD(variance_method="placebo", seed=251)
             result = sdid.fit(
                 sub_df,
                 outcome = outcome_var,
@@ -58,7 +58,6 @@ def league_sdid(league, outcome_var) -> dict:
             )
             
             raw_results[target_unit] = result
-            # estimator.plot(result)
             print(raw_results)
 
     return raw_results
