@@ -10,7 +10,7 @@ def prepare_panel(league: str) -> pd.DataFrame:
     min_stint = df.groupby(["team", "season"])["stint_length"].transform("min")
     df = df[min_stint >= 6]
     df["unit_id"] = df["team"] + "_" + df["season"].astype(str)
-    
+
     return df.reset_index(drop=True)
 
 def prepare_donors(df: pd.DataFrame, team: str, season: int) -> pd.DataFrame:
@@ -23,13 +23,14 @@ def prepare_donors(df: pd.DataFrame, team: str, season: int) -> pd.DataFrame:
         (df["total_stints"] == 1) &
         (df["team"] != team)
     ].reset_index(drop=True)
-    
+
     return donor_pool
 
-def league_sdid(league, outcome_var) -> list[dict]:
+def league_sdid(league, outcome_var) -> tuple[list[dict], dict]:
     seasons = [2122, 2223, 2324, 2425, 2526]
     prepared = prepare_panel(league)
     rows = []
+    weights = {}
     for season in seasons:
 
         treated_teams = prepared.loc[
@@ -40,6 +41,9 @@ def league_sdid(league, outcome_var) -> list[dict]:
         for team in treated_teams:
             target_unit = f"{team}_{season}"
             donors = prepare_donors(prepared, team, season)
+            donors = donors[
+            donors.groupby("unit_id")[outcome_var].transform(lambda s: s.notna().all())
+            ].reset_index(drop=True) #yes, lambda was ai but it's cool
             treated_df = prepared[prepared["unit_id"] == target_unit]
 
             sub_df = pd.concat([donors, treated_df], ignore_index=True)
@@ -61,7 +65,7 @@ def league_sdid(league, outcome_var) -> list[dict]:
                 time = "round",
                 post_periods = post_rounds
             )
-            
+
             rows.append({
                             "unit_id": target_unit,
                             "league": league,
@@ -81,21 +85,34 @@ def league_sdid(league, outcome_var) -> list[dict]:
                             "pre_fit_placebo_p": result.pre_fit_placebo_pvalue,
                             "pre_fit_ok": result.pre_fit_placebo_pvalue > 0.05,
                         })
-    return rows
+            weights[target_unit] = dict(result.unit_weights)
+    return rows, weights
 
-
-def sdid_by_metric(metric):
+def sdid_by_metric(metric) -> tuple[list[dict], dict]:
     leagues = ["SA", "PL", "L1", "LL", "BL"]
     league_rows = []
+    weights = {}
 
     for league in leagues:
-        lsdid = league_sdid(league, metric)
+        run_sdid = league_sdid(league, metric)
+        lsdid = run_sdid[0]
+        wg = run_sdid[1]
         league_rows.extend(lsdid)
+        weights.update(wg)
 
-    return league_rows
+    return league_rows, weights
 
-sdid_results_points = pd.DataFrame(sdid_by_metric("points"))
+sdid_points = sdid_by_metric("points")
+sdid_results_points = pd.DataFrame(sdid_points[0])
+sdid_weights_points = pd.DataFrame()
 sdid_results_points.to_csv("../data/processed/sdid_results_points.csv", index=False)
 
-sdid_results_gd = pd.DataFrame(sdid_by_metric("goal_diff"))
+sdid_gd = sdid_by_metric("goal_diff")
+sdid_results_gd = pd.DataFrame(sdid_gd[0])
+sdid_weights_gd = pd.DataFrame()
 sdid_results_gd.to_csv("../data/processed/sdid_results_goal_diff.csv", index=False)
+
+sdid_pvexp = sdid_by_metric("points_vs_exp")
+sdid_results_pvexp = pd.DataFrame(sdid_pvexp[0])
+sdid_weights_pvexp = pd.DataFrame()
+sdid_results_pvexp.to_csv("../data/processed/sdid_results_exp_points_diff.csv", index=False)
