@@ -104,15 +104,18 @@ def sdid_by_metric(metric) -> tuple[list[dict], dict]:
 
 sdid_points = sdid_by_metric("points")
 sdid_results_points = pd.DataFrame(sdid_points[0])
-sdid_weights_points = pd.DataFrame()
+sdid_weights_points = pd.DataFrame.from_dict(sdid_points[1], orient="index").fillna(0.0)
 sdid_results_points.to_csv("../data/processed/sdid_results_points.csv", index=False)
+sdid_weights_points.to_csv("../data/processed/sdid_weights_points.csv")
 
 sdid_gd = sdid_by_metric("goal_diff")
 sdid_results_gd = pd.DataFrame(sdid_gd[0])
-sdid_weights_gd = pd.DataFrame()
+sdid_weights_gd = pd.DataFrame.from_dict(sdid_gd[1], orient="index").fillna(0.0)
 sdid_results_gd.to_csv("../data/processed/sdid_results_goal_diff.csv", index=False)
+sdid_weights_gd.to_csv("../data/processed/sdid_weights_gd.csv")
 
 sdid_pvexp = sdid_by_metric("points_vs_exp")
 sdid_results_pvexp = pd.DataFrame(sdid_pvexp[0])
-sdid_weights_pvexp = pd.DataFrame()
+sdid_weights_pvexp = pd.DataFrame.from_dict(sdid_pvexp[1], orient="index").fillna(0.0)
 sdid_results_pvexp.to_csv("../data/processed/sdid_results_exp_points_diff.csv", index=False)
+sdid_weights_pvexp.to_csv("../data/processed/sdid_weights_pvexp.csv")
