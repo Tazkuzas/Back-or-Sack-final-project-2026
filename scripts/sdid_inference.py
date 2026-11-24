@@ -43,7 +43,7 @@ def league_sdid(league, outcome_var) -> tuple[list[dict], dict]:
             donors = prepare_donors(prepared, team, season)
             donors = donors[
             donors.groupby("unit_id")[outcome_var].transform(lambda s: s.notna().all())
-            ].reset_index(drop=True) #yes, lambda was ai but it's cool
+            ].reset_index(drop=True)
             treated_df = prepared[prepared["unit_id"] == target_unit]
 
             sub_df = pd.concat([donors, treated_df], ignore_index=True)
@@ -95,8 +95,7 @@ def sdid_by_metric(metric) -> tuple[list[dict], dict]:
 
     for league in leagues:
         run_sdid = league_sdid(league, metric)
-        lsdid = run_sdid[0]
-        wg = run_sdid[1]
+        lsdid, wg = run_sdid
         league_rows.extend(lsdid)
         weights.update(wg)
 
@@ -117,5 +116,5 @@ sdid_weights_gd.to_csv("../data/processed/sdid_weights_gd.csv")
 sdid_pvexp = sdid_by_metric("points_vs_exp")
 sdid_results_pvexp = pd.DataFrame(sdid_pvexp[0])
 sdid_weights_pvexp = pd.DataFrame.from_dict(sdid_pvexp[1], orient="index").fillna(0.0)
-sdid_results_pvexp.to_csv("../data/processed/sdid_results_exp_points_diff.csv", index=False)
+sdid_results_pvexp.to_csv("../data/processed/sdid_results_pvexp.csv", index=False)
 sdid_weights_pvexp.to_csv("../data/processed/sdid_weights_pvexp.csv")
