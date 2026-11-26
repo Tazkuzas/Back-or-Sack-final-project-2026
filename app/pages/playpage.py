@@ -75,7 +75,7 @@ elif screen <= 5:
     st.progress(screen / 5)
     st.caption(f"Decision {screen} of 5")
 
-    st.title(case["team"], text_alignment="center")
+    st.title(f"{case['team']} 20{case['season'][:2]}/{case['season'][2:]}", text_alignment="center")
     st.subheader(f"Sack or back {case['coach']}?", text_alignment="center")
 
     m1, m2, m3 = st.columns(3)
