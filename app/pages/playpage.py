@@ -61,6 +61,17 @@ elif screen <= 5:
     number_of_teams = season_data["team"].nunique()
     number_of_rounds = team_data["round"].max()
 
+    so_far = season_data[season_data["round"] <= case["sack_round"]]
+    expected_table = so_far.groupby("team")["exp_points"].sum()
+    expected_ranks = expected_table.rank(ascending=False, method="min")
+    expected_position = int(expected_ranks[case["team"]])
+
+    expected_points = before["exp_points"].sum()
+
+    last5_games = before.tail(5)
+    last5_points = last5_games["points"].sum()
+    last5_expected = last5_games["exp_points"].sum()
+
     st.progress(screen / 5)
     st.caption(f"Decision {screen} of 5")
 
@@ -76,13 +87,22 @@ elif screen <= 5:
         st.metric("Position", int(now["position"]), border=True)
 
     with m3:
-        st.metric("Points", int(now["cum_points"]), border=True)
+        st.metric("Expected position", expected_position, border=True)
+
+    m4, m5 = st.columns(2)
+
+    with m4:
+        st.metric("Points", int(now["cum_points"]), delta=f"{now['cum_points'] - expected_points:+.1f} vs bookmakers", border=True)
+
+    with m5:
+        st.metric("Expected points", f"{expected_points:.1f}", border=True)
 
     d1, d2 = st.columns([1, 2])
 
     with d1:
         st.subheader("Last 5 games")
-        last5 = before[["opponent", "goals_for", "goals_against", "result"]].tail(5)
+        last5 = last5_games[["opponent", "goals_for", "goals_against", "result", "points", "exp_points"]]
+        last5 = last5.rename(columns={"exp_points": "expected"})
         st.dataframe(last5, hide_index=True)
 
     with d2:
