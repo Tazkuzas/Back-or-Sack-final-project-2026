@@ -5,20 +5,29 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent.parent
 
-
-@st.cache_data
-def load_team_games():
-    return pd.read_csv(ROOT / "data" / "processed" / "team_games.csv", dtype={"season": str})
+data = pd.read_csv(ROOT/"data/processed/team_games.csv", dtype={"season": str})
+data2 = pd.read_csv(ROOT/"data/processed/cases.csv", dtype={"season": str})
 
 
-data = load_team_games()
-
-cases = pd.DataFrame({
+example = pd.DataFrame({
     "league": ["PL", "BL", "SA", "LL", "PL"],
     "season": ["2122", "2223", "2324", "2223", "2223"],
     "team": ["Man United", "Bayern Munich", "Napoli", "Sevilla", "Chelsea"],
     "sack_round": [12, 25, 12, 7, 6],
 })
+if "picked" not in st.session_state:
+    st.session_state["picked"] = data2.sample(5).reset_index(drop=True)
+
+picked = st.session_state["picked"]
+
+cases = pd.DataFrame(index=example.index, columns=example.columns)
+cases["league"]= picked["league"]
+cases["season"]= picked["season"]
+cases["team"]= picked["club"]
+cases["sack_round"]= picked["decision_round"]
+cases["points_swing"]= picked["points_swing"]
+cases["coach"]= picked["coach"]
+cases["directors_call"]= picked["directors_call"]
 
 if "screen" not in st.session_state:
     st.session_state["screen"] = 0
@@ -47,7 +56,6 @@ elif screen <= 5:
     team_data = season_data[season_data["team"] == case["team"]]
 
     before = team_data[team_data["round"] <= case["sack_round"]]
-    after = team_data[team_data["round"] > case["sack_round"]]
     now = before.iloc[-1]
 
     number_of_teams = season_data["team"].nunique()
@@ -57,6 +65,7 @@ elif screen <= 5:
     st.caption(f"Decision {screen} of 5")
 
     st.title(case["team"], text_alignment="center")
+    st.subheader(f"Sack or back {case['coach']}?", text_alignment="center")
 
     m1, m2, m3 = st.columns(3)
 
@@ -97,48 +106,54 @@ elif screen <= 5:
             choice = "Back"
 
     if choice is not None:
-        ppg_before = before["points"].mean()
-        ppg_after = after["points"].mean()
+        swing = case["points_swing"]
 
-        if ppg_after > ppg_before:
-            right_call = "Sack"
+        if choice == "Sack":
+            your_points = swing
         else:
-            right_call = "Back"
+            your_points = 0
 
-        if choice == right_call:
-            st.session_state["score"] = st.session_state["score"] + 1
+        if case["directors_call"] == "Sack":
+            director_points = swing
+        else:
+            director_points = 0
 
-        if right_call == "Sack":
-            st.session_state["directors"] = st.session_state["directors"] + 1
+        st.session_state["score"] = st.session_state["score"] + your_points
+        st.session_state["directors"] = st.session_state["directors"] + director_points
 
         st.session_state["rows"].append({
             "Club": case["team"],
+            "Coach": case["coach"],
             "Matchday": int(case["sack_round"]),
             "Your call": choice,
-            "Points per game before": round(ppg_before, 2),
-            "Points per game after": round(ppg_after, 2),
-            "Right call": right_call,
+            "Directors' call": case["directors_call"],
+            "Points vs directors": round(your_points - director_points, 1),
         })
-
         st.session_state["screen"] = screen + 1
         st.rerun()
 
 else:
     st.title("Full time", text_alignment="center")
 
-    r1, r2 = st.columns(2)
+    difference = st.session_state["score"] - st.session_state["directors"]
+
+    r1, r2, r3 = st.columns(3)
 
     with r1:
-        st.metric("Your score", f"{st.session_state['score']} / 5", border=True)
+        st.metric("Your points", f"{st.session_state['score']:+.1f}", border=True)
 
     with r2:
-        st.metric("Real directors", f"{st.session_state['directors']} / 5", border=True)
+        st.metric("Directors' points", f"{st.session_state['directors']:+.1f}", border=True)
+
+    with r3:
+        st.metric("You vs directors", f"{difference:+.1f}", border=True)
 
     st.subheader("Your five decisions")
     results = pd.DataFrame(st.session_state["rows"])
     st.dataframe(results, hide_index=True)
 
-    
+    st.caption("Points = points the club won or lost over the rest of the season compared with keeping the coach. Backing the coach always counts as 0.")
+
     left, middle, right = st.columns(3)
 
     with middle:
@@ -147,4 +162,5 @@ else:
             st.session_state["score"] = 0
             st.session_state["directors"] = 0
             st.session_state["rows"] = []
+            st.session_state["picked"] = data2.sample(5).reset_index(drop=True)
             st.rerun()

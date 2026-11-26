@@ -1,110 +1,278 @@
-case_id,unit_id,league,season,team,club,coach_out,coach_in,decision_round,sacking_round,position,points,final_position,final_points,n_post_games,att,ci_low,ci_high,points_swing
-0,UC Sampdoria_2122,SA,2122,UC Sampdoria,Sampdoria,Roberto D'Aversa,Marco Giampaolo,22,23,16,20,15,36,16,0.5046322591213102,-0.3165845946375372,1.3258491128801575,8.1
-1,Udinese Calcio_2122,SA,2122,Udinese Calcio,Udinese,Luca Gotti,Gabriele Cioffi,16,17,14,16,12,47,22,0.514319941037319,-0.2848318093935289,1.313471691468167,11.3
-2,AC Monza_2223,SA,2223,AC Monza,Monza,Giovanni Stroppa,Raffaele Palladino,6,7,20,1,11,52,32,1.4866805693133314,0.5414233569954087,2.431937781631254,47.6
-3,Bologna Football Club 1909_2223,SA,2223,Bologna Football Club 1909,Bologna,Siniša Mihajlović,Thiago Motta,5,7,16,3,9,54,32,0.5489557741725106,-0.382996822823612,1.4809083711686333,17.6
-4,Spezia Calcio_2223,SA,2223,Spezia Calcio,Spezia,Luca Gotti,Leonardo Semplici,22,24,17,19,18,31,15,0.026117151051273175,-0.8732598073903348,0.9254941094928812,0.4
-5,UC Sampdoria_2223,SA,2223,UC Sampdoria,Sampdoria,Marco Giampaolo,Dejan Stankovic,8,9,20,2,20,19,30,0.4058791852914844,-0.5542581676172214,1.36601653820019,12.2
-6,US Cremonese_2223,SA,2223,US Cremonese,Cremonese,Massimiliano Alvini,Davide Ballardini,18,19,20,7,19,27,20,0.692340976820112,-0.1206291230687806,1.5053110767090045,13.8
-7,US Salernitana 1919_2223,SA,2223,US Salernitana 1919,Salernitana,Davide Nicola,Paulo Sousa,22,23,16,21,15,42,16,0.5278620958634415,-0.2930683246092147,1.3487925163360976,8.4
-8,Associazione Sportiva Roma_2324,SA,2324,Associazione Sportiva Roma,Roma,José Mourinho,Daniele De Rossi,20,21,9,29,6,63,18,0.7196378450222606,-0.2736486395832618,1.712924329627783,13.0
-9,US Lecce_2324,SA,2324,US Lecce,Lecce,Roberto D'Aversa,Luca Gotti,28,29,17,25,14,38,10,0.3849383874511271,-0.6784628405273271,1.4483396154295813,3.8
-10,US Sassuolo_2324,SA,2324,US Sassuolo,Sassuolo,Alessio Dionisi,Davide Ballardini,25,27,18,20,19,30,12,-0.03967492214027206,-0.9789502375925795,0.8996003933120355,-0.5
-11,AC Milan_2425,SA,2425,AC Milan,Milan,Paulo Fonseca,Sérgio Conceição,17,18,8,27,8,63,21,-0.017729320714324863,-0.8174490779951428,0.781990436566493,-0.4
-12,Genoa CFC_2425,SA,2425,Genoa CFC,Genoa,Alberto Gilardino,Patrick Vieira,12,13,17,10,13,43,26,0.7309589617980523,-0.10527276927108786,1.5671906928671926,19.0
-13,Juventus FC_2425,SA,2425,Juventus FC,Juventus,Thiago Motta,Igor Tudor,29,30,5,52,4,70,9,-0.1072998773513569,-1.28038823077752,1.0657884760748062,-1.0
-14,Parma Calcio 1913_2425,SA,2425,Parma Calcio 1913,Parma,Fabio Pecchia,Cristian Chivu,25,26,18,20,15,36,13,0.6668437890043695,-0.14934640934774557,1.4830339873564844,8.7
-15,US Lecce_2425,SA,2425,US Lecce,Lecce,Luca Gotti,Marco Giampaolo,12,13,18,9,17,34,26,0.28079409183518095,-0.5665675875095058,1.1281557711798678,7.3
-16,ACF Fiorentina_2526,SA,2526,ACF Fiorentina,Fiorentina,Stefano Pioli,Paolo Vanoli,10,11,20,4,15,42,28,1.0667836011678575,0.20159229977179716,1.931974902563918,29.9
-17,Atalanta BC_2526,SA,2526,Atalanta BC,Atalanta,Ivan Jurić,Raffaele Palladino,11,12,13,13,7,59,27,0.5177714199337392,-0.2720201564906304,1.3075629963581088,14.0
-18,Genoa CFC_2526,SA,2526,Genoa CFC,Genoa,Patrick Vieira,Daniele De Rossi,9,11,20,3,16,41,28,0.7422156864198436,-0.10227155251943965,1.586702925359127,20.8
-19,Hellas Verona_2526,SA,2526,Hellas Verona,Verona,Paolo Zanetti,Paolo Sammarco,23,24,20,14,19,21,15,0.25342532258530764,-0.6981166737548936,1.2049673189255088,3.8
-20,Juventus FC_2526,SA,2526,Juventus FC,Juventus,Igor Tudor,Luciano Spalletti,8,10,8,12,6,69,29,0.3093000300378243,-0.5990114100946866,1.217611470170335,9.0
-21,Pisa Sporting Club_2526,SA,2526,Pisa Sporting Club,Pisa,Alberto Gilardino,Oscar Hiljemark,23,24,19,14,20,18,15,-0.3499108312342217,-1.1728768427711047,0.4730551803026614,-5.2
-22,Torino FC_2526,SA,2526,Torino FC,Torino,Marco Baroni,Roberto D'Aversa,26,27,15,27,13,45,12,0.8457950784598616,-0.06539456117149867,1.7569847180912217,10.1
-23,US Cremonese_2526,SA,2526,US Cremonese,Cremonese,Davide Nicola,Marco Giampaolo,29,30,18,24,18,34,9,0.2637172678235033,-0.8230759898815336,1.3505105255285403,2.4
-24,Aston Villa_2122,PL,2122,Aston Villa,Aston Villa,Dean Smith,Steven Gerrard,11,12,16,10,14,45,27,0.5335380241793353,-0.3181706828823083,1.3852467312409789,14.4
-25,Burnley FC_2122,PL,2122,Burnley FC,Burnley,Sean Dyche,Mike Jackson,30,31,18,24,18,35,8,0.7741655522796193,-0.4665410850922599,2.0148721896514985,6.2
-26,Everton FC_2122,PL,2122,Everton FC,Everton,Rafael Benítez,Frank Lampard,19,21,15,19,16,39,18,-0.07384132852764816,-0.9198302001153336,0.7721475430600373,-1.3
-27,Leeds United_2122,PL,2122,Leeds United,Leeds,Marcelo Bielsa,Jesse Marsch,26,27,16,23,17,38,12,0.36027214187741885,-0.5086822350893099,1.2292265188441476,4.3
-28,Manchester United_2122,PL,2122,Manchester United,Man United,Ole Gunnar Solskjær,Ralf Rangnick,12,15,8,17,6,58,24,-0.17459720252107877,-0.9286140353478876,0.57941963030573,-4.2
-29,Norwich City_2122,PL,2122,Norwich City,Norwich,Daniel Farke,Dean Smith,11,12,20,5,20,22,27,0.2001492284670967,-0.662045489692958,1.0623439466271514,5.4
-30,Aston Villa_2223,PL,2223,Aston Villa,Aston Villa,Steven Gerrard,Unai Emery,11,14,17,9,7,61,25,1.3260234111304254,0.47775076913901615,2.174296053121835,33.2
-31,Brighton & Hove Albion_2223,PL,2223,Brighton & Hove Albion,Brighton,Graham Potter,Roberto De Zerbi,6,7,4,13,6,62,32,-1.0479052685735415,-2.0771017940297867,-0.01870874311729609,-33.5
-32,Crystal Palace_2223,PL,2223,Crystal Palace,Crystal Palace,Patrick Vieira,Roy Hodgson,27,29,13,27,11,45,10,1.2225030831924266,0.2538589253629244,2.1911472410219286,12.2
-33,Everton FC_2223,PL,2223,Everton FC,Everton,Frank Lampard,Sean Dyche,20,21,19,15,17,36,18,0.4963644010635599,-0.3496951087603422,1.342423910887462,8.9
-34,Leicester City_2223,PL,2223,Leicester City,Leicester,Brendan Rodgers,Dean Smith,28,31,19,25,18,34,8,-0.47069802706236297,-1.6859577746987213,0.7445617205739955,-3.8
-35,Crystal Palace_2324,PL,2324,Crystal Palace,Crystal Palace,Roy Hodgson,Oliver Glasner,24,26,16,24,10,49,13,0.29468888894777295,-0.5308370561110984,1.1202148340066442,3.8
-36,Nottingham Forest_2324,PL,2324,Nottingham Forest,Nott'm Forest,Steve Cooper,Nuno Espírito Santo,17,18,17,14,17,36,21,0.05669831513627776,-0.6896043460902762,0.8030009763628317,1.2
-37,Sheffield United_2324,PL,2324,Sheffield United,Sheffield United,Paul Heckingbottom,Chris Wilder,14,15,20,5,20,16,24,-0.025789415042069688,-0.8153129349613487,0.7637341048772094,-0.6
-38,Everton FC_2425,PL,2425,Everton FC,Everton,Sean Dyche,David Moyes,19,20,16,17,13,48,19,0.8157330323989394,-0.009867112479573614,1.6413331772774522,15.5
-39,Leicester City_2425,PL,2425,Leicester City,Leicester,Steve Cooper,Ruud van Nistelrooy,12,14,16,10,18,25,25,-0.06791092383318865,-0.9085558283636318,0.7727339806972545,-1.7
-40,Manchester United_2425,PL,2425,Manchester United,Man United,Erik ten Hag,Rúben Amorim,9,12,13,11,15,42,27,-0.48449771580549883,-1.348786192857277,0.3797907612462794,-13.1
-41,West Ham United_2425,PL,2425,West Ham United,West Ham,Julen Lopetegui,Graham Potter,20,21,14,23,14,43,18,0.1327948283450904,-0.7380872476212565,1.0036769043114373,2.4
-42,Wolverhampton Wanderers_2425,PL,2425,Wolverhampton Wanderers,Wolves,Gary O'Neil,Vítor Pereira,16,17,19,9,16,42,22,0.9217339644650084,0.10031311459672754,1.7431548143332893,20.3
-43,Manchester United_2526,PL,2526,Manchester United,Man United,Rúben Amorim,Michael Carrick,20,22,6,31,3,71,17,0.673081434385435,-0.04680356884656767,1.3929664376174378,11.4
-44,Wolverhampton Wanderers_2526,PL,2526,Wolverhampton Wanderers,Wolves,Vítor Pereira,Rob Edwards,10,12,20,2,20,20,27,0.4535296181088651,-0.41116620473387616,1.3182254409516063,12.2
-45,AS Monaco_2122,L1,2122,AS Monaco,Monaco,Niko Kovac,Philippe Clement,19,20,7,29,3,69,19,0.36794378639861186,-0.803015381109665,1.5389029539068888,7.0
-46,AS Saint-Étienne_2122,L1,2122,AS Saint-Étienne,St Etienne,Claude Puel,Pascal Dupraz,17,19,20,12,18,32,20,0.6279088568433349,-0.39106659110643127,1.646884304793101,12.6
-47,ESTAC Troyes_2122,L1,2122,ESTAC Troyes,Troyes,Laurent Batlles,Bruno Irles,19,20,16,17,15,38,19,-0.12022688578266578,-1.27449568662781,1.0340419150624784,-2.3
-48,FC Girondins Bordeaux_2122,L1,2122,FC Girondins Bordeaux,Bordeaux,Vladimir Petkovic,David Guion,23,25,19,20,20,31,14,0.34600444603529407,-0.8434025776868814,1.5354114697574694,4.8
-49,AJ Auxerre_2223,L1,2223,AJ Auxerre,Auxerre,Jean-Marc Furlan,Christophe Pélissier,10,13,16,8,17,35,26,0.16587464724895656,-0.7639594792604376,1.0957087737583506,4.3
-50,ESTAC Troyes_2223,L1,2223,ESTAC Troyes,Troyes,Bruno Irles,Patrick Kisnorbo,14,16,13,14,19,24,23,-0.5336441612311477,-1.433297674072781,0.36600935161048564,-12.3
-51,OGC Nice_2223,L1,2223,OGC Nice,Nice,Lucien Favre,Didier Digard,17,18,10,21,9,58,21,0.7309278864387706,-0.37362609631318466,1.8354818691907258,15.3
-52,Olympique Lyon_2223,L1,2223,Olympique Lyon,Lyon,Peter Bosz,Laurent Blanc,10,11,9,14,7,62,28,0.4017676662316933,-0.771627899283913,1.5751632317472997,11.2
-53,Stade Reims_2223,L1,2223,Stade Reims,Reims,Óscar García,Will Still,10,11,15,8,11,51,28,0.7488523690403027,-0.38103365716302073,1.878738395243626,21.0
-54,Stade Rennais FC_2324,L1,2324,Stade Rennais FC,Rennes,Bruno Génésio,Julien Stéphan,12,13,14,12,10,46,22,0.2902738655500594,-0.49633465308400093,1.0768823841841197,6.4
-55,Olympique Lyon_2425,L1,2425,Olympique Lyon,Lyon,Pierre Sage,Paulo Fonseca,19,20,6,30,6,57,15,0.7106262653274708,-0.13144156180379485,1.5526940924587365,10.7
-56,Stade Reims_2425,L1,2425,Stade Reims,Reims,Luka Elsner,Samba Diawara,20,21,13,22,16,33,14,-0.41750910087005416,-1.5225111290962339,0.6874929273561254,-5.8
-57,AS Monaco_2526,L1,2526,AS Monaco,Monaco,Adi Hütter,Sébastien Pocognoli,7,8,6,13,7,54,27,-0.43836826444112353,-1.1786225807274018,0.3018860518451547,-11.8
-58,FC Metz_2526,L1,2526,FC Metz,Metz,Stéphane Le Mignan,Benoît Tavenot,18,19,18,12,18,17,16,-0.08354105247592991,-1.0563568201724596,0.8892747152205998,-1.3
-59,OGC Nice_2526,L1,2526,OGC Nice,Nice,Franck Haise,Claude Puel,16,17,13,17,16,32,18,-0.8091373028897161,-1.474791438434806,-0.14348316734462618,-14.6
-60,Olympique Marseille_2526,L1,2526,Olympique Marseille,Marseille,Roberto De Zerbi,Habib Beye,21,23,4,39,5,59,12,-0.028748350287979525,-0.9432096455432776,0.8857129449673186,-0.3
-61,Paris FC_2526,L1,2526,Paris FC,Paris FC,Stéphane Gilli,Antoine Kombouaré,23,24,15,23,11,44,11,0.5797239002263045,-0.4202772577782118,1.5797250582308209,6.4
-62,RC Strasbourg Alsace_2526,L1,2526,RC Strasbourg Alsace,Strasbourg,Liam Rosenior,Gary O'Neil,17,18,7,24,8,53,17,-0.12996861086978392,-0.9541538888982813,0.6942166671587134,-2.2
-63,Stade Rennais FC_2526,L1,2526,Stade Rennais FC,Rennes,Habib Beye,Franck Haise,21,23,6,31,6,59,12,0.8197789524423487,-0.3272600099646128,1.9668179148493101,9.8
-64,Cádiz CF_2122,LL,2122,Cádiz CF,Cadiz,Álvaro Cervera,Sergio,20,21,19,14,16,39,18,0.5781249922091545,-0.33884381579547507,1.495093800213784,10.4
-65,Elche CF_2122,LL,2122,Elche CF,Elche,Fran Escribá,Francisco Rodríguez,14,16,18,11,13,42,23,0.2608033087509326,-0.6171600651966834,1.1387666826985487,6.0
-66,FC Barcelona_2122,LL,2122,FC Barcelona,Barcelona,Ronald Koeman,Xavi,10,13,9,15,2,73,26,0.7808022760192835,-0.11395912563387,1.6755636776724372,20.3
-67,Getafe CF_2122,LL,2122,Getafe CF,Getafe,Míchel,Quique Sánchez Flores,8,9,20,1,15,39,30,1.2005606693150297,0.43878046128340376,1.9623408773466555,36.0
-68,RCD Mallorca_2122,LL,2122,RCD Mallorca,Mallorca,Luis García,Javier Aguirre,29,30,18,26,17,39,9,0.4952431634065062,-0.37435406286475736,1.3648403896777697,4.5
-69,Celta de Vigo_2223,LL,2223,Celta de Vigo,Celta,Eduardo Coudet,Carlos Carvalhal,12,13,16,11,13,43,26,0.4155895803327565,-0.33591551298198796,1.167094673647501,10.8
-70,Getafe CF_2223,LL,2223,Getafe CF,Getafe,Quique Sánchez Flores,Pepe Bordalás,31,32,18,31,15,42,7,0.45705540965905156,-0.7929516981188045,1.7070625174369076,3.2
-71,RCD Espanyol Barcelona_2223,LL,2223,RCD Espanyol Barcelona,Espanol,Diego Martínez,Luis García,27,28,18,27,19,37,11,-0.21186642087395618,-1.1393443178041112,0.7156114760561989,-2.3
-72,Real Valladolid CF_2223,LL,2223,Real Valladolid CF,Valladolid,Pacheta,Paulo Pezzolano,27,28,16,28,18,40,11,0.010589705913231749,-0.9396742023978106,0.9608536142242741,0.1
-73,Villarreal CF_2223,LL,2223,Villarreal CF,Villarreal,Unai Emery,Quique Setién,11,12,7,18,5,64,27,0.3704610804329979,-0.4469455573174624,1.1878677181834583,10.0
-74,Celta de Vigo_2324,LL,2324,Celta de Vigo,Celta,Rafael Benítez,Claudio Giráldez,28,29,17,24,14,41,10,1.0942247964182044,0.18112021994646343,2.007329372889945,10.9
-75,Cádiz CF_2324,LL,2324,Cádiz CF,Cadiz,Sergio,Mauricio Pellegrino,21,22,18,15,18,33,17,0.21644017967347584,-0.7075134889996693,1.140393848346621,3.7
-76,Rayo Vallecano_2324,LL,2324,Rayo Vallecano,Vallecano,Francisco Rodríguez,Iñigo Pérez,24,25,14,24,17,38,14,-0.06791493468969576,-0.9370720855300955,0.8012422161507039,-1.0
-77,Deportivo Alavés_2425,LL,2425,Deportivo Alavés,Alaves,Luis García,Eduardo Coudet,15,16,16,14,14,42,23,0.7167917562216777,-0.1487743133216506,1.582357825765006,16.5
-78,Sevilla FC_2425,LL,2425,Sevilla FC,Sevilla,Xavier García Pimienta,Joaquín Caparrós,31,32,15,36,16,41,7,-0.41107829583554795,-1.759285444713263,0.9371288530421673,-2.9
-79,UD Las Palmas_2425,LL,2425,UD Las Palmas,Las Palmas,Luis Carrión,Diego Martínez,9,10,20,3,19,32,29,0.7998426010822731,-0.029904012872223218,1.6295892150367695,23.2
-80,Valencia CF_2425,LL,2425,Valencia CF,Valencia,Rubén Baraja,Carlos Corberán,17,18,19,12,11,46,21,1.2380265278016707,0.39547669300689103,2.0805763625964504,26.0
-81,Deportivo Alavés_2526,LL,2526,Deportivo Alavés,Alaves,Eduardo Coudet,Quique Sánchez Flores,26,27,16,27,14,43,12,0.3996283023151177,-0.44182714848274773,1.2410837531129832,4.8
-82,Levante UD_2526,LL,2526,Levante UD,Levante,Julián Calero,Luís Castro,14,17,19,9,18,42,22,0.3241761493926135,-0.5008605260298408,1.1492128248150677,7.1
-83,RCD Mallorca_2526,LL,2526,RCD Mallorca,Mallorca,Jagoba Arrasate,Martín Demichelis,25,27,18,24,17,42,12,0.8587563257738968,0.09755247727174998,1.6199601742760437,10.3
-84,Real Madrid_2526,LL,2526,Real Madrid,Real Madrid,Xabi Alonso,Álvaro Arbeloa,19,20,2,45,2,86,19,-0.46538402262262285,-1.3643625315382781,0.4335944862930325,-8.8
-85,Real Sociedad_2526,LL,2526,Real Sociedad,Sociedad,Sergio Francisco,Pellegrino Matarazzo,16,18,15,16,10,46,21,0.6349415027175882,-0.26357943777780246,1.5334624432129789,13.3
-86,Sevilla FC_2526,LL,2526,Sevilla FC,Sevilla,Matías Almeyda,Luis García,29,30,16,31,15,43,9,0.44281000647593804,-0.548092170780326,1.4337121837322022,4.0
-87,RB Leipzig_2122,BL,2122,RB Leipzig,RB Leipzig,Jesse Marsch,Domenico Tedesco,14,15,11,18,4,58,20,0.7870448030672641,0.02460297139636447,1.5494866347381637,15.7
-88,Bayer 04 Leverkusen_2223,BL,2223,Bayer 04 Leverkusen,Leverkusen,Gerardo Seoane,Xabi Alonso,8,9,17,5,6,50,26,1.1657783915367594,0.30944763642224427,2.0221091466512746,30.3
-89,Bayern Munich_2223,BL,2223,Bayern Munich,Bayern Munich,Julian Nagelsmann,Thomas Tuchel,25,26,2,52,1,71,9,0.7284690876708251,-0.2810113066872939,1.737949482028944,6.6
-90,FC Schalke 04_2223,BL,2223,FC Schalke 04,Schalke 04,Frank Kramer,Thomas Reis,10,12,17,6,17,31,23,0.2911828762563056,-0.44787469796448326,1.0302404504770946,6.7
-91,Hertha BSC_2223,BL,2223,Hertha BSC,Hertha,Sandro Schwarz,Pál Dárdai,28,29,18,22,18,29,6,0.7053952664728458,-0.30921839292361164,1.7200089258693032,4.2
-92,TSG 1899 Hoffenheim_2223,BL,2223,TSG 1899 Hoffenheim,Hoffenheim,André Breitenreiter,Pellegrino Matarazzo,19,20,14,19,12,36,15,-0.14146953754849909,-0.8463849600894741,0.5634458849924758,-2.1
-93,VfL Bochum_2223,BL,2223,VfL Bochum,Bochum,Thomas Reis,Thomas Letsch,6,8,18,0,14,35,27,1.3061163667687772,0.5188131682788575,2.0934195652586967,35.3
-94,1.FC Köln_2324,BL,2324,1.FC Köln,FC Koln,Steffen Baumgart,Timo Schultz,16,17,17,10,17,27,18,0.768945948110933,-0.05406165127893103,1.5919535475007969,13.8
-95,1.FC Union Berlin_2324,BL,2324,1.FC Union Berlin,Union Berlin,Urs Fischer,Nenad Bjelica,11,13,18,6,15,33,22,0.5058634620394504,-0.21362817725509609,1.225355101333997,11.1
-96,FC Augsburg_2324,BL,2324,FC Augsburg,Augsburg,Enrico Maaßen,Jess Thorup,7,8,15,5,11,39,27,0.5444765460355394,-0.3585675307597681,1.4475206228308468,14.7
-97,VfL Bochum_2324,BL,2324,VfL Bochum,Bochum,Thomas Letsch,Heiko Butscher,28,29,15,26,16,33,6,0.7009078051387199,-0.3927633754161366,1.7945789856935763,4.2
-98,VfL Wolfsburg_2324,BL,2324,VfL Wolfsburg,Wolfsburg,Niko Kovac,Ralph Hasenhüttl,26,27,14,25,12,37,8,0.41597386072084314,-0.7607934786437287,1.592741200085415,3.3
-99,1.FC Union Berlin_2425,BL,2425,1.FC Union Berlin,Union Berlin,Bo Svensson,Steffen Baumgart,15,16,12,16,13,40,19,-0.03636339544832472,-0.8123253798078733,0.739598588911224,-0.7
-100,Borussia Dortmund_2425,BL,2425,Borussia Dortmund,Dortmund,Nuri Şahin,Niko Kovac,18,21,10,25,4,57,14,0.4311202199788835,-0.3141751344350737,1.1764155743928408,6.0
-101,RB Leipzig_2425,BL,2425,RB Leipzig,RB Leipzig,Marco Rose,Zsolt Löw,27,28,6,42,7,51,7,-0.17548691562400487,-1.4190133352879606,1.0680395040399508,-1.2
-102,TSG 1899 Hoffenheim_2425,BL,2425,TSG 1899 Hoffenheim,Hoffenheim,Pellegrino Matarazzo,Christian Ilzer,10,11,15,9,15,32,24,0.31415156407615297,-0.4388317034231721,1.067134831575478,7.5
-103,VfL Bochum_2425,BL,2425,VfL Bochum,Bochum,Peter Zeidler,Dieter Hecking,7,10,18,1,18,25,25,0.9018591318098609,0.08709696536118072,1.716621298258541,22.5
-104,1.FC Köln_2526,BL,2526,1.FC Köln,FC Koln,Lukas Kwasniok,René Wagner,27,28,15,26,14,32,7,-0.11521259803705546,-1.2955778902990065,1.0651526942248954,-0.8
-105,1.FSV Mainz 05_2526,BL,2526,1.FSV Mainz 05,Mainz,Bo Henriksen,Urs Fischer,12,14,18,6,10,40,21,1.1660186760820561,0.3982514278753584,1.9337859242887538,24.5
-106,Eintracht Frankfurt_2526,BL,2526,Eintracht Frankfurt,Ein Frankfurt,Dino Toppmöller,Albert Riera,18,21,7,27,8,44,14,0.027817933655258503,-0.66477090455801,0.7204067718685271,0.4
-107,FC Augsburg_2526,BL,2526,FC Augsburg,Augsburg,Sandro Wagner,Manuel Baum,12,13,14,10,9,43,22,0.5040529035131239,-0.19956519707002596,1.207671004096274,11.1
-108,SV Werder Bremen_2526,BL,2526,SV Werder Bremen,Werder Bremen,Horst Steffen,Daniel Thioune,20,21,15,19,15,32,14,0.05758079013061543,-0.6467999840369079,0.7619615642981388,0.8
+case_id,unit_id,league,season,team,club,coach,coach_in,directors_call,decision_round,position,points,games_left,final_position,final_points,points_swing
+0,UC Sampdoria_2122,SA,2122,UC Sampdoria,Sampdoria,Roberto D'Aversa,Marco Giampaolo,Sack,22,16,20,16,15,36,8.1
+1,Udinese Calcio_2122,SA,2122,Udinese Calcio,Udinese,Luca Gotti,Gabriele Cioffi,Sack,16,14,16,22,12,47,11.3
+2,AC Monza_2223,SA,2223,AC Monza,Monza,Giovanni Stroppa,Raffaele Palladino,Sack,6,20,1,32,11,52,47.6
+3,Bologna Football Club 1909_2223,SA,2223,Bologna Football Club 1909,Bologna,Siniša Mihajlović,Thiago Motta,Sack,5,16,3,33,9,54,17.6
+4,Spezia Calcio_2223,SA,2223,Spezia Calcio,Spezia,Luca Gotti,Leonardo Semplici,Sack,22,17,19,16,18,31,0.4
+5,UC Sampdoria_2223,SA,2223,UC Sampdoria,Sampdoria,Marco Giampaolo,Dejan Stankovic,Sack,8,20,2,30,20,19,12.2
+6,US Cremonese_2223,SA,2223,US Cremonese,Cremonese,Massimiliano Alvini,Davide Ballardini,Sack,18,20,7,20,19,27,13.8
+7,US Salernitana 1919_2223,SA,2223,US Salernitana 1919,Salernitana,Davide Nicola,Paulo Sousa,Sack,22,16,21,16,15,42,8.4
+8,Associazione Sportiva Roma_2324,SA,2324,Associazione Sportiva Roma,Roma,José Mourinho,Daniele De Rossi,Sack,20,9,29,18,6,63,13.0
+9,US Lecce_2324,SA,2324,US Lecce,Lecce,Roberto D'Aversa,Luca Gotti,Sack,28,17,25,10,14,38,3.8
+10,US Sassuolo_2324,SA,2324,US Sassuolo,Sassuolo,Alessio Dionisi,Davide Ballardini,Sack,25,18,20,13,19,30,-0.5
+11,AC Milan_2425,SA,2425,AC Milan,Milan,Paulo Fonseca,Sérgio Conceição,Sack,17,8,27,21,8,63,-0.4
+12,Genoa CFC_2425,SA,2425,Genoa CFC,Genoa,Alberto Gilardino,Patrick Vieira,Sack,12,17,10,26,13,43,19.0
+13,Juventus FC_2425,SA,2425,Juventus FC,Juventus,Thiago Motta,Igor Tudor,Sack,29,5,52,9,4,70,-1.0
+14,Parma Calcio 1913_2425,SA,2425,Parma Calcio 1913,Parma,Fabio Pecchia,Cristian Chivu,Sack,25,18,20,13,15,36,8.7
+15,US Lecce_2425,SA,2425,US Lecce,Lecce,Luca Gotti,Marco Giampaolo,Sack,12,18,9,26,17,34,7.3
+16,ACF Fiorentina_2526,SA,2526,ACF Fiorentina,Fiorentina,Stefano Pioli,Paolo Vanoli,Sack,10,20,4,28,15,42,29.9
+17,Atalanta BC_2526,SA,2526,Atalanta BC,Atalanta,Ivan Jurić,Raffaele Palladino,Sack,11,13,13,27,7,59,14.0
+18,Genoa CFC_2526,SA,2526,Genoa CFC,Genoa,Patrick Vieira,Daniele De Rossi,Sack,9,20,3,29,16,41,20.8
+19,Hellas Verona_2526,SA,2526,Hellas Verona,Verona,Paolo Zanetti,Paolo Sammarco,Sack,23,20,14,15,19,21,3.8
+20,Juventus FC_2526,SA,2526,Juventus FC,Juventus,Igor Tudor,Luciano Spalletti,Sack,8,8,12,30,6,69,9.0
+21,Pisa Sporting Club_2526,SA,2526,Pisa Sporting Club,Pisa,Alberto Gilardino,Oscar Hiljemark,Sack,23,19,14,15,20,18,-5.2
+22,Torino FC_2526,SA,2526,Torino FC,Torino,Marco Baroni,Roberto D'Aversa,Sack,26,15,27,12,13,45,10.1
+23,US Cremonese_2526,SA,2526,US Cremonese,Cremonese,Davide Nicola,Marco Giampaolo,Sack,29,18,24,9,18,34,2.4
+24,Aston Villa_2122,PL,2122,Aston Villa,Aston Villa,Dean Smith,Steven Gerrard,Sack,11,16,10,27,14,45,14.4
+25,Burnley FC_2122,PL,2122,Burnley FC,Burnley,Sean Dyche,Mike Jackson,Sack,30,18,24,8,18,35,6.2
+26,Everton FC_2122,PL,2122,Everton FC,Everton,Rafael Benítez,Frank Lampard,Sack,19,15,19,19,16,39,-1.3
+27,Leeds United_2122,PL,2122,Leeds United,Leeds,Marcelo Bielsa,Jesse Marsch,Sack,26,16,23,12,17,38,4.3
+28,Manchester United_2122,PL,2122,Manchester United,Man United,Ole Gunnar Solskjær,Ralf Rangnick,Sack,12,8,17,26,6,58,-4.2
+29,Norwich City_2122,PL,2122,Norwich City,Norwich,Daniel Farke,Dean Smith,Sack,11,20,5,27,20,22,5.4
+30,Aston Villa_2223,PL,2223,Aston Villa,Aston Villa,Steven Gerrard,Unai Emery,Sack,11,17,9,27,7,61,33.2
+31,Brighton & Hove Albion_2223,PL,2223,Brighton & Hove Albion,Brighton,Graham Potter,Roberto De Zerbi,Sack,6,4,13,32,6,62,-33.5
+32,Crystal Palace_2223,PL,2223,Crystal Palace,Crystal Palace,Patrick Vieira,Roy Hodgson,Sack,27,13,27,11,11,45,12.2
+33,Everton FC_2223,PL,2223,Everton FC,Everton,Frank Lampard,Sean Dyche,Sack,20,19,15,18,17,36,8.9
+34,Leicester City_2223,PL,2223,Leicester City,Leicester,Brendan Rodgers,Dean Smith,Sack,28,19,25,10,18,34,-3.8
+35,Crystal Palace_2324,PL,2324,Crystal Palace,Crystal Palace,Roy Hodgson,Oliver Glasner,Sack,24,16,24,14,10,49,3.8
+36,Nottingham Forest_2324,PL,2324,Nottingham Forest,Nott'm Forest,Steve Cooper,Nuno Espírito Santo,Sack,17,17,14,21,17,36,1.2
+37,Sheffield United_2324,PL,2324,Sheffield United,Sheffield United,Paul Heckingbottom,Chris Wilder,Sack,14,20,5,24,20,16,-0.6
+38,Everton FC_2425,PL,2425,Everton FC,Everton,Sean Dyche,David Moyes,Sack,19,16,17,19,13,48,15.5
+39,Leicester City_2425,PL,2425,Leicester City,Leicester,Steve Cooper,Ruud van Nistelrooy,Sack,12,16,10,26,18,25,-1.7
+40,Manchester United_2425,PL,2425,Manchester United,Man United,Erik ten Hag,Rúben Amorim,Sack,9,13,11,29,15,42,-13.1
+41,West Ham United_2425,PL,2425,West Ham United,West Ham,Julen Lopetegui,Graham Potter,Sack,20,14,23,18,14,43,2.4
+42,Wolverhampton Wanderers_2425,PL,2425,Wolverhampton Wanderers,Wolves,Gary O'Neil,Vítor Pereira,Sack,16,19,9,22,16,42,20.3
+43,Manchester United_2526,PL,2526,Manchester United,Man United,Rúben Amorim,Michael Carrick,Sack,20,6,31,18,3,71,11.4
+44,Wolverhampton Wanderers_2526,PL,2526,Wolverhampton Wanderers,Wolves,Vítor Pereira,Rob Edwards,Sack,10,20,2,28,20,20,12.2
+45,AS Monaco_2122,L1,2122,AS Monaco,Monaco,Niko Kovac,Philippe Clement,Sack,19,7,29,19,3,69,7.0
+46,AS Saint-Étienne_2122,L1,2122,AS Saint-Étienne,St Etienne,Claude Puel,Pascal Dupraz,Sack,17,20,12,21,18,32,12.6
+47,ESTAC Troyes_2122,L1,2122,ESTAC Troyes,Troyes,Laurent Batlles,Bruno Irles,Sack,19,16,17,19,15,38,-2.3
+48,FC Girondins Bordeaux_2122,L1,2122,FC Girondins Bordeaux,Bordeaux,Vladimir Petkovic,David Guion,Sack,23,19,20,15,20,31,4.8
+49,AJ Auxerre_2223,L1,2223,AJ Auxerre,Auxerre,Jean-Marc Furlan,Christophe Pélissier,Sack,10,16,8,28,17,35,4.3
+50,ESTAC Troyes_2223,L1,2223,ESTAC Troyes,Troyes,Bruno Irles,Patrick Kisnorbo,Sack,14,13,14,24,19,24,-12.3
+51,OGC Nice_2223,L1,2223,OGC Nice,Nice,Lucien Favre,Didier Digard,Sack,17,10,21,21,9,58,15.3
+52,Olympique Lyon_2223,L1,2223,Olympique Lyon,Lyon,Peter Bosz,Laurent Blanc,Sack,10,9,14,28,7,62,11.2
+53,Stade Reims_2223,L1,2223,Stade Reims,Reims,Óscar García,Will Still,Sack,10,15,8,28,11,51,21.0
+54,Stade Rennais FC_2324,L1,2324,Stade Rennais FC,Rennes,Bruno Génésio,Julien Stéphan,Sack,12,14,12,22,10,46,6.4
+55,Olympique Lyon_2425,L1,2425,Olympique Lyon,Lyon,Pierre Sage,Paulo Fonseca,Sack,19,6,30,15,6,57,10.7
+56,Stade Reims_2425,L1,2425,Stade Reims,Reims,Luka Elsner,Samba Diawara,Sack,20,13,22,14,16,33,-5.8
+57,AS Monaco_2526,L1,2526,AS Monaco,Monaco,Adi Hütter,Sébastien Pocognoli,Sack,7,6,13,27,7,54,-11.8
+58,FC Metz_2526,L1,2526,FC Metz,Metz,Stéphane Le Mignan,Benoît Tavenot,Sack,18,18,12,16,18,17,-1.3
+59,OGC Nice_2526,L1,2526,OGC Nice,Nice,Franck Haise,Claude Puel,Sack,16,13,17,18,16,32,-14.6
+60,Olympique Marseille_2526,L1,2526,Olympique Marseille,Marseille,Roberto De Zerbi,Habib Beye,Sack,21,4,39,13,5,59,-0.3
+61,Paris FC_2526,L1,2526,Paris FC,Paris FC,Stéphane Gilli,Antoine Kombouaré,Sack,23,15,23,11,11,44,6.4
+62,RC Strasbourg Alsace_2526,L1,2526,RC Strasbourg Alsace,Strasbourg,Liam Rosenior,Gary O'Neil,Sack,17,7,24,17,8,53,-2.2
+63,Stade Rennais FC_2526,L1,2526,Stade Rennais FC,Rennes,Habib Beye,Franck Haise,Sack,21,6,31,13,6,59,9.8
+64,Cádiz CF_2122,LL,2122,Cádiz CF,Cadiz,Álvaro Cervera,Sergio,Sack,20,19,14,18,16,39,10.4
+65,Elche CF_2122,LL,2122,Elche CF,Elche,Fran Escribá,Francisco Rodríguez,Sack,14,18,11,24,13,42,6.0
+66,FC Barcelona_2122,LL,2122,FC Barcelona,Barcelona,Ronald Koeman,Xavi,Sack,10,9,15,28,2,73,20.3
+67,Getafe CF_2122,LL,2122,Getafe CF,Getafe,Míchel,Quique Sánchez Flores,Sack,8,20,1,30,15,39,36.0
+68,RCD Mallorca_2122,LL,2122,RCD Mallorca,Mallorca,Luis García,Javier Aguirre,Sack,29,18,26,9,17,39,4.5
+69,Celta de Vigo_2223,LL,2223,Celta de Vigo,Celta,Eduardo Coudet,Carlos Carvalhal,Sack,12,16,11,26,13,43,10.8
+70,Getafe CF_2223,LL,2223,Getafe CF,Getafe,Quique Sánchez Flores,Pepe Bordalás,Sack,31,18,31,7,15,42,3.2
+71,RCD Espanyol Barcelona_2223,LL,2223,RCD Espanyol Barcelona,Espanol,Diego Martínez,Luis García,Sack,27,18,27,11,19,37,-2.3
+72,Real Valladolid CF_2223,LL,2223,Real Valladolid CF,Valladolid,Pacheta,Paulo Pezzolano,Sack,27,16,28,11,18,40,0.1
+73,Villarreal CF_2223,LL,2223,Villarreal CF,Villarreal,Unai Emery,Quique Setién,Sack,11,7,18,27,5,64,10.0
+74,Celta de Vigo_2324,LL,2324,Celta de Vigo,Celta,Rafael Benítez,Claudio Giráldez,Sack,28,17,24,10,14,41,10.9
+75,Cádiz CF_2324,LL,2324,Cádiz CF,Cadiz,Sergio,Mauricio Pellegrino,Sack,21,18,15,17,18,33,3.7
+76,Rayo Vallecano_2324,LL,2324,Rayo Vallecano,Vallecano,Francisco Rodríguez,Iñigo Pérez,Sack,24,14,24,14,17,38,-1.0
+77,Deportivo Alavés_2425,LL,2425,Deportivo Alavés,Alaves,Luis García,Eduardo Coudet,Sack,15,16,14,23,14,42,16.5
+78,Sevilla FC_2425,LL,2425,Sevilla FC,Sevilla,Xavier García Pimienta,Joaquín Caparrós,Sack,31,15,36,7,16,41,-2.9
+79,UD Las Palmas_2425,LL,2425,UD Las Palmas,Las Palmas,Luis Carrión,Diego Martínez,Sack,9,20,3,29,19,32,23.2
+80,Valencia CF_2425,LL,2425,Valencia CF,Valencia,Rubén Baraja,Carlos Corberán,Sack,17,19,12,21,11,46,26.0
+81,Deportivo Alavés_2526,LL,2526,Deportivo Alavés,Alaves,Eduardo Coudet,Quique Sánchez Flores,Sack,26,16,27,12,14,43,4.8
+82,Levante UD_2526,LL,2526,Levante UD,Levante,Julián Calero,Luís Castro,Sack,14,19,9,24,18,42,7.1
+83,RCD Mallorca_2526,LL,2526,RCD Mallorca,Mallorca,Jagoba Arrasate,Martín Demichelis,Sack,25,18,24,13,17,42,10.3
+84,Real Madrid_2526,LL,2526,Real Madrid,Real Madrid,Xabi Alonso,Álvaro Arbeloa,Sack,19,2,45,19,2,86,-8.8
+85,Real Sociedad_2526,LL,2526,Real Sociedad,Sociedad,Sergio Francisco,Pellegrino Matarazzo,Sack,16,15,16,22,10,46,13.3
+86,Sevilla FC_2526,LL,2526,Sevilla FC,Sevilla,Matías Almeyda,Luis García,Sack,29,16,31,9,15,43,4.0
+87,RB Leipzig_2122,BL,2122,RB Leipzig,RB Leipzig,Jesse Marsch,Domenico Tedesco,Sack,14,11,18,20,4,58,15.7
+88,Bayer 04 Leverkusen_2223,BL,2223,Bayer 04 Leverkusen,Leverkusen,Gerardo Seoane,Xabi Alonso,Sack,8,17,5,26,6,50,30.3
+89,Bayern Munich_2223,BL,2223,Bayern Munich,Bayern Munich,Julian Nagelsmann,Thomas Tuchel,Sack,25,2,52,9,1,71,6.6
+90,FC Schalke 04_2223,BL,2223,FC Schalke 04,Schalke 04,Frank Kramer,Thomas Reis,Sack,10,17,6,24,17,31,6.7
+91,Hertha BSC_2223,BL,2223,Hertha BSC,Hertha,Sandro Schwarz,Pál Dárdai,Sack,28,18,22,6,18,29,4.2
+92,TSG 1899 Hoffenheim_2223,BL,2223,TSG 1899 Hoffenheim,Hoffenheim,André Breitenreiter,Pellegrino Matarazzo,Sack,19,14,19,15,12,36,-2.1
+93,VfL Bochum_2223,BL,2223,VfL Bochum,Bochum,Thomas Reis,Thomas Letsch,Sack,6,18,0,28,14,35,35.3
+94,1.FC Köln_2324,BL,2324,1.FC Köln,FC Koln,Steffen Baumgart,Timo Schultz,Sack,16,17,10,18,17,27,13.8
+95,1.FC Union Berlin_2324,BL,2324,1.FC Union Berlin,Union Berlin,Urs Fischer,Nenad Bjelica,Sack,11,18,6,23,15,33,11.1
+96,FC Augsburg_2324,BL,2324,FC Augsburg,Augsburg,Enrico Maaßen,Jess Thorup,Sack,7,15,5,27,11,39,14.7
+97,VfL Bochum_2324,BL,2324,VfL Bochum,Bochum,Thomas Letsch,Heiko Butscher,Sack,28,15,26,6,16,33,4.2
+98,VfL Wolfsburg_2324,BL,2324,VfL Wolfsburg,Wolfsburg,Niko Kovac,Ralph Hasenhüttl,Sack,26,14,25,8,12,37,3.3
+99,1.FC Union Berlin_2425,BL,2425,1.FC Union Berlin,Union Berlin,Bo Svensson,Steffen Baumgart,Sack,15,12,16,19,13,40,-0.7
+100,Borussia Dortmund_2425,BL,2425,Borussia Dortmund,Dortmund,Nuri Şahin,Niko Kovac,Sack,18,10,25,16,4,57,6.0
+101,RB Leipzig_2425,BL,2425,RB Leipzig,RB Leipzig,Marco Rose,Zsolt Löw,Sack,27,6,42,7,7,51,-1.2
+102,TSG 1899 Hoffenheim_2425,BL,2425,TSG 1899 Hoffenheim,Hoffenheim,Pellegrino Matarazzo,Christian Ilzer,Sack,10,15,9,24,15,32,7.5
+103,VfL Bochum_2425,BL,2425,VfL Bochum,Bochum,Peter Zeidler,Dieter Hecking,Sack,7,18,1,27,18,25,22.5
+104,1.FC Köln_2526,BL,2526,1.FC Köln,FC Koln,Lukas Kwasniok,René Wagner,Sack,27,15,26,7,14,32,-0.8
+105,1.FSV Mainz 05_2526,BL,2526,1.FSV Mainz 05,Mainz,Bo Henriksen,Urs Fischer,Sack,12,18,6,22,10,40,24.5
+106,Eintracht Frankfurt_2526,BL,2526,Eintracht Frankfurt,Ein Frankfurt,Dino Toppmöller,Albert Riera,Sack,18,7,27,16,8,44,0.4
+107,FC Augsburg_2526,BL,2526,FC Augsburg,Augsburg,Sandro Wagner,Manuel Baum,Sack,12,14,10,22,9,43,11.1
+108,SV Werder Bremen_2526,BL,2526,SV Werder Bremen,Werder Bremen,Horst Steffen,Daniel Thioune,Sack,20,15,19,14,15,32,0.8
+109,Valencia CF_2122,LL,2122,Valencia CF,Valencia,Pepe Bordalás,,Back,11,11,13,27,9,48,10.7
+110,FC Toulouse_2324,L1,2324,FC Toulouse,Toulouse,Carles Martínez,,Back,6,15,6,28,11,43,9.2
+111,1.FSV Mainz 05_2223,BL,2223,1.FSV Mainz 05,Mainz,Bo Svensson,,Back,16,12,20,18,9,46,2.8
+112,Rayo Vallecano_2526,LL,2526,Rayo Vallecano,Vallecano,Iñigo Pérez,,Back,8,14,8,30,8,50,2.5
+113,Holstein Kiel_2425,BL,2425,Holstein Kiel,Holstein Kiel,Marcel Rapp,,Back,24,17,16,10,17,25,0.5
+114,Southampton FC_2122,PL,2122,Southampton FC,Southampton,Ralph Hasenhüttl,,Back,7,17,4,31,15,40,-0.5
+115,Angers SCO_2122,L1,2122,Angers SCO,Angers,Gérald Baticle,,Back,20,12,26,18,14,41,14.2
+116,Elche CF_2526,LL,2526,Elche CF,Elche,Eder Sarabia,,Back,23,16,24,15,13,43,0.5
+117,Como 1907_2425,SA,2425,Como 1907,Como,Cesc Fàbregas,,Back,23,15,22,15,10,49,-8.6
+118,Tottenham Hotspur_2425,PL,2425,Tottenham Hotspur,Tottenham,Ange Postecoglou,,Back,22,15,24,16,17,38,6.9
+119,Hellas Verona_2425,SA,2425,Hellas Verona,Verona,Paolo Zanetti,,Back,10,16,9,28,14,37,11.9
+120,Udinese Calcio_2526,SA,2526,Udinese Calcio,Udinese,Kosta Runjaić,,Back,29,11,36,9,10,50,-0.1
+121,Fulham FC_2526,PL,2526,Fulham FC,Fulham,Marco Silva,,Back,9,17,8,29,11,52,-2.8
+122,Angers SCO_2526,L1,2526,Angers SCO,Angers,Alexandre Dujeux,,Back,30,13,34,4,13,36,3.8
+123,Venezia FC_2425,SA,2425,Venezia FC,Venezia,Eusebio Di Francesco,,Back,8,20,4,30,19,29,7.3
+124,Crystal Palace_2425,PL,2425,Crystal Palace,Crystal Palace,Oliver Glasner,,Back,11,18,7,27,12,53,-17.6
+125,Luton Town_2324,PL,2324,Luton Town,Luton,Rob Edwards,,Back,29,18,22,9,18,26,5.4
+126,Clermont Foot 63_2324,L1,2324,Clermont Foot 63,Clermont,Pascal Gastien,,Back,27,18,20,7,18,25,2.0
+127,FC St. Pauli_2425,BL,2425,FC St. Pauli,St Pauli,Alexander Blessin,,Back,14,15,11,20,14,32,3.0
+128,Burnley FC_2324,PL,2324,Burnley FC,Burnley,Vincent Kompany,,Back,12,20,4,26,19,24,2.6
+129,SpVgg Greuther Fürth_2122,BL,2122,SpVgg Greuther Fürth,Greuther Furth,Stefan Leitl,,Back,29,18,16,5,18,18,2.2
+130,AC Ajaccio_2223,L1,2223,AC Ajaccio,Ajaccio,Olivier Pantaloni,,Back,28,19,21,10,18,26,4.8
+131,FC Metz_2122,L1,2122,FC Metz,Metz,Frédéric Antonetti,,Back,30,19,23,8,19,31,0.6
+132,FC Augsburg_2223,BL,2223,FC Augsburg,Augsburg,Enrico Maaßen,,Back,18,14,18,16,15,34,4.6
+133,Brighton & Hove Albion_2526,PL,2526,Brighton & Hove Albion,Brighton,Fabian Hürzeler,,Back,19,14,25,19,8,53,2.3
+134,FC Toulouse_2425,L1,2425,FC Toulouse,Toulouse,Carles Martínez,,Back,28,11,34,6,10,42,1.0
+135,Le Havre AC_2324,L1,2324,Le Havre AC,Le Havre,Luka Elsner,,Back,17,12,19,17,15,32,11.3
+136,FC Lorient_2324,L1,2324,FC Lorient,Lorient,Régis Le Bris,,Back,19,18,13,15,16,29,-2.6
+137,US Sassuolo_2223,SA,2223,US Sassuolo,Sassuolo,Alessio Dionisi,,Back,14,12,16,24,13,45,7.2
+138,RCD Espanyol Barcelona_2122,LL,2122,RCD Espanyol Barcelona,Espanol,Vicente Moreno,,Back,25,13,29,13,14,42,5.2
+139,TSG 1899 Hoffenheim_2122,BL,2122,TSG 1899 Hoffenheim,Hoffenheim,Sebastian Hoeneß,,Back,7,11,8,27,9,46,5.9
+140,Bologna Football Club 1909_2122,SA,2122,Bologna Football Club 1909,Bologna,Siniša Mihajlović,,Back,22,13,27,16,13,46,4.4
+141,AC Monza_2324,SA,2324,AC Monza,Monza,Raffaele Palladino,,Back,18,11,22,20,12,45,7.1
+142,Frosinone Calcio_2324,SA,2324,Frosinone Calcio,Frosinone,Eusebio Di Francesco,,Back,17,14,19,21,18,35,14.0
+143,FC Empoli_2425,SA,2425,FC Empoli,Empoli,Roberto D'Aversa,,Back,25,17,21,13,18,31,3.7
+144,Everton FC_2324,PL,2324,Everton FC,Everton,Sean Dyche,,Back,22,12,28,16,12,48,4.5
+145,RC Strasbourg Alsace_2324,L1,2324,RC Strasbourg Alsace,Strasbourg,Patrick Vieira,,Back,11,13,12,23,13,39,9.7
+146,Borussia Mönchengladbach_2324,BL,2324,Borussia Mönchengladbach,M'gladbach,Gerardo Seoane,,Back,22,15,22,12,14,34,3.1
+147,FC Metz_2324,L1,2324,FC Metz,Metz,László Bölöni,,Back,17,15,16,17,17,29,8.6
+148,Fulham FC_2324,PL,2324,Fulham FC,Fulham,Marco Silva,,Back,21,14,24,17,14,47,1.3
+149,West Ham United_2223,PL,2223,West Ham United,West Ham,David Moyes,,Back,14,16,14,24,14,40,6.8
+150,CD Leganés_2425,LL,2425,CD Leganés,Leganes,Borja Jiménez,,Back,6,15,5,32,18,40,8.6
+151,Brentford FC_2526,PL,2526,Brentford FC,Brentford,Keith Andrews,,Back,16,14,20,22,9,53,2.3
+152,AFC Bournemouth_2526,PL,2526,AFC Bournemouth,Bournemouth,Andoni Iraola,,Back,17,15,22,21,6,57,-1.0
+153,Spezia Calcio_2122,SA,2122,Spezia Calcio,Spezia,Thiago Motta,,Back,15,17,11,23,16,36,0.5
+154,SV Darmstadt 98_2324,BL,2324,SV Darmstadt 98,Darmstadt,Torsten Lieberknecht,,Back,20,18,11,14,18,17,5.4
+155,Clermont Foot 63_2122,L1,2122,Clermont Foot 63,Clermont,Pascal Gastien,,Back,12,15,13,26,17,36,16.2
+156,Brentford FC_2324,PL,2324,Brentford FC,Brentford,Thomas Frank,,Back,31,17,28,7,16,39,-2.8
+157,Ipswich Town_2425,PL,2425,Ipswich Town,Ipswich,Kieran McKenna,,Back,11,17,8,27,19,22,16.9
+158,Cagliari Calcio_2425,SA,2425,Cagliari Calcio,Cagliari,Davide Nicola,,Back,20,18,18,18,16,36,4.0
+159,ACF Fiorentina_2223,SA,2223,ACF Fiorentina,Fiorentina,Vincenzo Italiano,,Back,11,14,10,27,8,56,-10.2
+160,Stade Brestois 29_2122,L1,2122,Stade Brestois 29,Brest,Michel Der Zakarian,,Back,10,19,5,28,11,48,-14.0
+161,UD Las Palmas_2324,LL,2324,UD Las Palmas,Las Palmas,Xavier García Pimienta,,Back,32,13,37,6,16,40,6.2
+162,Crystal Palace_2122,PL,2122,Crystal Palace,Crystal Palace,Patrick Vieira,,Back,17,12,20,21,12,48,3.3
+163,Athletic Bilbao_2122,LL,2122,Athletic Bilbao,Ath Bilbao,Marcelino,,Back,19,11,24,19,8,55,-1.3
+164,Leeds United_2526,PL,2526,Leeds United,Leeds,Daniel Farke,,Back,30,15,32,8,14,47,-4.3
+165,VfB Stuttgart_2425,BL,2425,VfB Stuttgart,Stuttgart,Sebastian Hoeneß,,Back,26,10,37,8,9,50,0.4
+166,Parma Calcio 1913_2526,SA,2526,Parma Calcio 1913,Parma,Carlos Cuesta,,Back,32,14,36,6,12,45,-0.9
+167,VfB Stuttgart_2122,BL,2122,VfB Stuttgart,Stuttgart,Pellegrino Matarazzo,,Back,25,17,22,9,15,33,-0.5
+168,Stade Brestois 29_2526,L1,2526,Stade Brestois 29,Brest,Éric Roy,,Back,11,13,10,23,12,39,3.7
+169,Atalanta BC_2425,SA,2425,Atalanta BC,Atalanta,Gian Piero Gasperini,,Back,6,12,7,32,3,74,-12.7
+170,US Lecce_2223,SA,2223,US Lecce,Lecce,Marco Baroni,,Back,29,16,27,9,16,36,2.4
+171,RCD Espanyol Barcelona_2425,LL,2425,RCD Espanyol Barcelona,Espanol,Manolo González,,Back,16,18,14,22,15,42,-0.9
+172,AJ Auxerre_2526,L1,2526,AJ Auxerre,Auxerre,Christophe Pélissier,,Back,6,14,6,28,15,34,18.2
+173,Girona FC_2223,LL,2223,Girona FC,Girona,Míchel,,Back,12,17,10,26,10,49,-4.7
+174,CA Osasuna_2526,LL,2526,CA Osasuna,Osasuna,Alessio Lisci,,Back,13,17,11,25,16,42,1.9
+175,1. Fußballclub Heidenheim 1846_2425,BL,2425,1. Fußballclub Heidenheim 1846,Heidenheim,Frank Schmidt,,Back,13,16,10,21,16,29,7.5
+176,Cagliari Calcio_2526,SA,2526,Cagliari Calcio,Cagliari,Fabio Pisacane,,Back,32,16,33,6,14,43,-2.5
+177,Girona FC_2425,LL,2425,Girona FC,Girona,Míchel,,Back,28,13,34,10,17,41,7.4
+178,VfL Wolfsburg_2425,BL,2425,VfL Wolfsburg,Wolfsburg,Ralph Hasenhüttl,,Back,32,12,39,2,11,43,-1.1
+179,FC St. Pauli_2526,BL,2526,FC St. Pauli,St Pauli,Alexander Blessin,,Back,7,14,7,27,18,26,23.5
+180,FC Augsburg_2122,BL,2122,FC Augsburg,Augsburg,Markus Weinzierl,,Back,22,16,22,12,14,38,-0.8
+181,1.FC Köln_2223,BL,2223,1.FC Köln,FC Koln,Steffen Baumgart,,Back,17,10,21,17,11,42,5.3
+182,FC Toulouse_2223,L1,2223,FC Toulouse,Toulouse,Philippe Montanier,,Back,28,12,35,10,13,48,1.8
+183,Celta de Vigo_2122,LL,2122,Celta de Vigo,Celta,Eduardo Coudet,,Back,6,17,4,32,11,46,-3.7
+184,Borussia Mönchengladbach_2223,BL,2223,Borussia Mönchengladbach,M'gladbach,Daniel Farke,,Back,20,10,26,14,10,43,5.7
+185,AJ Auxerre_2425,L1,2425,AJ Auxerre,Auxerre,Christophe Pélissier,,Back,6,12,6,28,11,42,10.2
+186,US Lecce_2526,SA,2526,US Lecce,Lecce,Eusebio Di Francesco,,Back,31,18,27,7,17,38,-3.1
+187,Brentford FC_2122,PL,2122,Brentford FC,Brentford,Thomas Frank,,Back,13,11,16,25,13,46,10.7
+188,Borussia Mönchengladbach_2122,BL,2122,Borussia Mönchengladbach,M'gladbach,Adi Hütter,,Back,19,12,22,15,10,45,-1.1
+189,Crystal Palace_2526,PL,2526,Crystal Palace,Crystal Palace,Oliver Glasner,,Back,23,15,28,15,15,45,5.1
+190,FC Lorient_2122,L1,2122,FC Lorient,Lorient,Christophe Pélissier,,Back,21,18,17,17,16,36,-0.4
+191,Stade Reims_2122,L1,2122,Stade Reims,Reims,Óscar García,,Back,13,16,12,25,12,46,-0.1
+192,Torino FC_2425,SA,2425,Torino FC,Torino,Paolo Vanoli,,Back,12,11,14,26,11,44,13.0
+193,Getafe CF_2324,LL,2324,Getafe CF,Getafe,Pepe Bordalás,,Back,10,11,11,28,12,43,10.7
+194,FC Lorient_2526,L1,2526,FC Lorient,Lorient,Olivier Pantaloni,,Back,7,13,7,27,10,45,2.0
+195,Montpellier HSC_2122,L1,2122,Montpellier HSC,Montpellier,Olivier Dall'Oglio,,Back,28,11,38,10,13,43,11.4
+196,Cádiz CF_2223,LL,2223,Cádiz CF,Cadiz,Sergio,,Back,7,19,4,31,16,42,-5.3
+197,RCD Espanyol Barcelona_2526,LL,2526,RCD Espanyol Barcelona,Espanol,Manolo González,,Back,32,12,38,6,11,46,0.6
+198,Hamburger SV_2526,BL,2526,Hamburger SV,Hamburg,Merlin Polzin,,Back,30,14,31,4,13,38,-1.6
+199,CA Osasuna_2324,LL,2324,CA Osasuna,Osasuna,Jagoba Arrasate,,Back,14,14,14,24,11,45,1.8
+200,1. Fußballclub Heidenheim 1846_2526,BL,2526,1. Fußballclub Heidenheim 1846,Heidenheim,Frank Schmidt,,Back,7,17,4,27,17,26,6.4
+201,FC Empoli_2122,SA,2122,FC Empoli,Empoli,Aurelio Andreazzoli,,Back,32,14,34,6,14,41,0.7
+202,Clermont Foot 63_2223,L1,2223,Clermont Foot 63,Clermont,Pascal Gastien,,Back,25,12,31,13,8,59,-8.4
+203,Rayo Vallecano_2425,LL,2425,Rayo Vallecano,Vallecano,Iñigo Pérez,,Back,16,12,20,22,9,52,3.3
+204,Real Sociedad_2425,LL,2425,Real Sociedad,Sociedad,Imanol Alguacil,,Back,7,16,5,31,12,46,-0.1
+205,VfL Bochum_2122,BL,2122,VfL Bochum,Bochum,Thomas Reis,,Back,8,15,7,26,13,42,0.3
+206,VfL Wolfsburg_2223,BL,2223,VfL Wolfsburg,Wolfsburg,Niko Kovac,,Back,6,16,5,28,8,49,-5.8
+207,Newcastle United_2425,PL,2425,Newcastle United,Newcastle,Eddie Howe,,Back,9,12,12,29,5,66,0.7
+208,Brentford FC_2425,PL,2425,Brentford FC,Brentford,Thomas Frank,,Back,19,12,24,19,10,56,-2.3
+209,Le Havre AC_2425,L1,2425,Le Havre AC,Le Havre,Didier Digard,,Back,11,17,9,23,15,34,5.6
+210,Montpellier HSC_2324,L1,2324,Montpellier HSC,Montpellier,Michel Der Zakarian,,Back,22,13,23,12,12,42,-3.3
+211,SV Werder Bremen_2223,BL,2223,SV Werder Bremen,Werder Bremen,Ole Werner,,Back,31,12,35,3,13,36,3.2
+212,1. Fußballclub Heidenheim 1846_2324,BL,2324,1. Fußballclub Heidenheim 1846,Heidenheim,Frank Schmidt,,Back,27,11,30,7,8,42,-2.7
+213,RCD Mallorca_2324,LL,2324,RCD Mallorca,Mallorca,Javier Aguirre,,Back,32,17,31,6,15,40,-1.9
+214,Torino FC_2122,SA,2122,Torino FC,Torino,Ivan Juric,,Back,27,11,34,11,10,50,0.5
+215,US Sassuolo_2122,SA,2122,US Sassuolo,Sassuolo,Alessio Dionisi,,Back,8,14,8,30,11,50,2.5
+216,AFC Bournemouth_2324,PL,2324,AFC Bournemouth,Bournemouth,Andoni Iraola,,Back,6,18,3,32,13,48,-7.1
+217,FC Empoli_2223,SA,2223,FC Empoli,Empoli,Paolo Zanetti,,Back,32,15,32,6,14,43,-3.7
+218,Angers SCO_2425,L1,2425,Angers SCO,Angers,Alexandre Dujeux,,Back,25,13,27,9,14,36,3.3
+219,Cagliari Calcio_2324,SA,2324,Cagliari Calcio,Cagliari,Claudio Ranieri,,Back,24,19,18,14,17,36,-4.2
+220,FC Nantes_2425,L1,2425,FC Nantes,Nantes,Antoine Kombouaré,,Back,13,17,11,21,13,36,2.6
+221,Torino FC_2324,SA,2324,Torino FC,Torino,Ivan Juric,,Back,10,13,12,28,10,53,4.5
+222,UD Almería_2223,LL,2223,UD Almería,Almeria,Rubi,,Back,8,15,7,30,17,41,9.5
+223,CA Osasuna_2425,LL,2425,CA Osasuna,Osasuna,Vicente Moreno,,Back,21,11,27,17,8,52,1.8
+224,FC Toulouse_2526,L1,2526,FC Toulouse,Toulouse,Carles Martínez,,Back,32,10,41,2,9,45,-1.0
+225,Nottingham Forest_2223,PL,2223,Nottingham Forest,Nott'm Forest,Steve Cooper,,Back,26,14,26,12,16,38,3.1
+226,Genoa CFC_2324,SA,2324,Genoa CFC,Genoa,Alberto Gilardino,,Back,28,12,33,10,11,49,-1.4
+227,SV Werder Bremen_2425,BL,2425,SV Werder Bremen,Werder Bremen,Ole Werner,,Back,22,10,30,12,8,51,-1.4
+228,Valencia CF_2324,LL,2324,Valencia CF,Valencia,Rubén Baraja,,Back,16,11,19,22,9,49,3.9
+229,RC Strasbourg Alsace_2425,L1,2425,RC Strasbourg Alsace,Strasbourg,Liam Rosenior,,Back,12,11,13,22,7,57,-9.5
+230,Deportivo Alavés_2324,LL,2324,Deportivo Alavés,Alaves,Luis García,,Back,20,13,20,18,10,46,-2.2
+231,SV Werder Bremen_2324,BL,2324,SV Werder Bremen,Werder Bremen,Ole Werner,,Back,26,10,30,8,9,42,-0.5
+232,Le Havre AC_2526,L1,2526,Le Havre AC,Le Havre,Didier Digard,,Back,30,14,30,4,14,35,0.1
+233,Celta de Vigo_2526,LL,2526,Celta de Vigo,Celta,Claudio Giráldez,,Back,9,17,7,29,6,54,-12.0
+234,Brighton & Hove Albion_2122,PL,2122,Brighton & Hove Albion,Brighton,Graham Potter,,Back,29,13,33,9,9,51,-4.7
+235,RCD Mallorca_2223,LL,2223,RCD Mallorca,Mallorca,Javier Aguirre,,Back,26,11,32,12,9,50,0.1
+236,US Sassuolo_2526,SA,2526,US Sassuolo,Sassuolo,Fabio Grosso,,Back,20,11,23,18,11,49,-0.5
+237,FC Nantes_2122,L1,2122,FC Nantes,Nantes,Antoine Kombouaré,,Back,16,13,19,22,9,55,-2.2
+238,LOSC Lille_2122,L1,2122,LOSC Lille,Lille,Jocelyn Gourvennec,,Back,14,12,17,24,10,55,1.0
+239,Rayo Vallecano_2122,LL,2122,Rayo Vallecano,Vallecano,Andoni Iraola,,Back,28,13,32,10,12,42,3.4
+240,Stade Brestois 29_2425,L1,2425,Stade Brestois 29,Brest,Éric Roy,,Back,12,12,13,22,9,50,-3.8
+241,Girona FC_2526,LL,2526,Girona FC,Girona,Míchel,,Back,7,20,3,31,19,41,-6.9
+242,Stade Rennais FC_2122,L1,2122,Stade Rennais FC,Rennes,Bruno Génésio,,Back,8,13,9,30,5,66,-8.8
+243,CA Osasuna_2122,LL,2122,CA Osasuna,Osasuna,Jagoba Arrasate,,Back,17,11,22,21,10,47,9.0
+244,Sunderland AFC_2526,PL,2526,Sunderland AFC,Sunderland,Régis Le Bris,,Back,27,12,36,11,7,54,-1.0
+245,Hellas Verona_2324,SA,2324,Hellas Verona,Verona,Marco Baroni,,Back,22,16,18,16,13,38,-2.6
+246,Getafe CF_2526,LL,2526,Getafe CF,Getafe,José Bordalás,,Back,22,16,23,16,7,51,-7.5
+247,FC Augsburg_2425,BL,2425,FC Augsburg,Augsburg,Jess Thorup,,Back,15,13,16,19,12,43,0.1
+248,Getafe CF_2425,LL,2425,Getafe CF,Getafe,José Bordalás,,Back,7,19,4,31,13,42,-1.6
+249,1.FC Union Berlin_2122,BL,2122,1.FC Union Berlin,Union Berlin,Urs Fischer,,Back,27,10,38,7,5,57,-7.3
+250,Real Betis Balompié_2425,LL,2425,Real Betis Balompié,Betis,Manuel Pellegrini,,Back,23,11,29,15,6,60,-8.1
+251,SC Freiburg_2526,BL,2526,SC Freiburg,Freiburg,Julian Schuster,,Back,9,11,10,25,7,47,1.5
+252,RC Lens_2324,L1,2324,RC Lens,Lens,Franck Haise,,Back,6,16,4,28,7,51,-13.5
+253,Torino FC_2223,SA,2223,Torino FC,Torino,Ivan Juric,,Back,10,11,11,28,10,53,5.4
+254,1.FSV Mainz 05_2122,BL,2122,1.FSV Mainz 05,Mainz,Bo Svensson,,Back,29,10,38,5,8,46,0.1
+255,Fulham FC_2223,PL,2223,Fulham FC,Fulham,Marco Silva,,Back,29,11,39,9,10,52,1.5
+256,Athletic Bilbao_2526,LL,2526,Athletic Bilbao,Ath Bilbao,Ernesto Valverde,,Back,30,11,38,8,12,45,5.3
+257,TSG 1899 Hoffenheim_2526,BL,2526,TSG 1899 Hoffenheim,Hoffenheim,Christian Ilzer,,Back,6,11,7,28,5,61,-6.5
+258,FC Lorient_2223,L1,2223,FC Lorient,Lorient,Régis Le Bris,,Back,32,11,45,6,10,55,0.1
+259,Wolverhampton Wanderers_2324,PL,2324,Wolverhampton Wanderers,Wolves,Gary O'Neil,,Back,14,14,15,24,15,46,3.5
+260,Villarreal CF_2122,LL,2122,Villarreal CF,Villarreal,Unai Emery,,Back,12,11,15,26,7,59,-0.5
+261,Newcastle United_2223,PL,2223,Newcastle United,Newcastle,Eddie Howe,,Back,7,11,8,31,4,71,-12.6
+262,Valencia CF_2526,LL,2526,Valencia CF,Valencia,Carlos Corberán,,Back,18,18,16,20,9,49,-9.5
+263,Celta de Vigo_2425,LL,2425,Celta de Vigo,Celta,Claudio Giráldez,,Back,21,13,25,17,7,55,-4.1
+264,Liverpool FC_2526,PL,2526,Liverpool FC,Liverpool,Arne Slot,,Back,12,12,18,26,5,60,9.6
+265,Chelsea FC_2324,PL,2324,Chelsea FC,Chelsea,Mauricio Pochettino,,Back,6,14,5,32,6,63,-14.4
+266,Udinese Calcio_2425,SA,2425,Udinese Calcio,Udinese,Kosta Runjaić,,Back,32,11,40,6,12,44,5.0
+267,Eintracht Frankfurt_2122,BL,2122,Eintracht Frankfurt,Ein Frankfurt,Oliver Glasner,,Back,22,10,31,12,11,42,9.1
+268,Newcastle United_2526,PL,2526,Newcastle United,Newcastle,Eddie Howe,,Back,27,11,36,11,12,49,4.0
+269,Leicester City_2122,PL,2122,Leicester City,Leicester,Brendan Rodgers,,Back,6,13,7,32,8,52,9.3
+270,Olympique Lyon_2122,L1,2122,Olympique Lyon,Lyon,Peter Bosz,,Back,19,11,26,19,7,62,-4.3
+271,Udinese Calcio_2223,SA,2223,Udinese Calcio,Udinese,Andrea Sottil,,Back,32,12,42,6,12,46,5.2
+272,Everton FC_2526,PL,2526,Everton FC,Everton,David Moyes,,Back,20,12,28,18,13,49,10.0
+273,Aston Villa_2425,PL,2425,Aston Villa,Aston Villa,Unai Emery,,Back,13,12,19,25,6,66,0.3
+274,1.FC Köln_2122,BL,2122,1.FC Köln,FC Koln,Steffen Baumgart,,Back,12,12,15,22,7,52,1.2
+275,West Ham United_2324,PL,2324,West Ham United,West Ham,David Moyes,,Back,11,12,14,27,9,52,7.6
+276,SC Freiburg_2425,BL,2425,SC Freiburg,Freiburg,Julian Schuster,,Back,19,10,27,15,5,55,-2.5
