@@ -11,15 +11,21 @@ def create_sdid_df(regressors, main_data, weight_data):
     donors = weight_data.columns.tolist()
     treated = weight_data.index.tolist()
 #    data = []
-    relevant_data = main_data[main_data["unit_id"].isin(treated)]
+    relevant_data = main_data[main_data["unit_id"].isin(treated)].copy()
+    
     for t in treated:
+        mask = relevant_data["unit_id"] == t
         for r in regressors:
-            relevant_data[relevant_data["round"]][f"sdid_{r}"] = sum(d * main_data[[main_data["unit_id"] == t][r]][d] for d in donors)
-    return relevant_data    
+            cf_series = sum(
+                weight_data.loc[t, d] * main_data.loc[main_data["unit_id"] == d].set_index("round")[r]
+                for d in donors
+            )
+            relevant_data.loc[mask, f"sdid_{r}"] = relevant_data.loc[mask, "round"].map(cf_series)
+            
+    return relevant_data
 
 
 test1 = create_sdid_df(["points_vs_exp", "points", "goal_diff"], original_data, weights_expvp)
 print(test1)
-print(test2)
-print(test3)
+
 
