@@ -41,4 +41,9 @@ def create_sdid_df(regressors, main_data, weight_data):
 
 
 results = create_sdid_df(["points_vs_exp", "points", "goal_diff"], original_data, [weights_expvp, weights_points, weights_gd])
+
+results = results.sort_values(["unit_id", "round"])
+results["sdid_cum_points"] = results.groupby("unit_id")["sdid_points"].cumsum()
+results["sdid_cum_goal_diff"] = results.groupby("unit_id")["sdid_goal_diff"].cumsum()
+
 results.to_csv("../data/processed/round_counterfactuals.csv")
