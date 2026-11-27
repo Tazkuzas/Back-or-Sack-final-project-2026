@@ -8,12 +8,13 @@ weights_expvp = pd.read_csv("../data/processed/sdid_weights_pvexp.csv", index_co
 original_data["unit_id"] = original_data["team"] + "_" + original_data["season"].astype(str)
 
 def create_sdid_df(regressors, main_data, weight_data):  
+    treated = weight_data[0].index.tolist()
+    relevant_data = main_data[main_data["unit_id"].isin(treated)].copy()
+
     for r in regressors:
         relevant_weights = weight_data[regressors.index(r)].copy()
         relevant_weights.index.name = "unit_id"
         donors = relevant_weights.columns.tolist()
-        treated = relevant_weights.index.tolist()
-        relevant_data = main_data[main_data["unit_id"].isin(treated)].copy()
         donor_data = main_data[main_data["unit_id"].isin(donors)]
     
         donor_pivot = donor_data.pivot(index="round", columns="unit_id", values=r)[donors]
