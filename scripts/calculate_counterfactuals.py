@@ -21,6 +21,21 @@ def create_sdid_df(regressors, main_data, weight_data):
         cf_matrix = donor_pivot.fillna(0).dot(relevant_weights.T)
         cf_long = cf_matrix.stack().rename(f"sdid_{r}").reset_index()
         relevant_data = relevant_data.merge(cf_long, on=["round", "unit_id"], how="left")
+
+        unit_shift = (
+            relevant_data[relevant_data["treated"] == 0]
+            .assign(diff = lambda d: d[r] - d[f"sdid_{r}"])
+            .groupby("unit_id")["diff"]
+            .mean()
+            .rename(f"_shift_{r}")
+        )
+        relevant_data = relevant_data.merge(
+            unit_shift, on="unit_id", how="left"
+        )
+        relevant_data[f"sdid_{r}"] = (
+            relevant_data[f"sdid_{r}"] + relevant_data[f"_shift_{r}"]
+        )
+        relevant_data = relevant_data.drop(columns=[f"_shift_{r}"])
         
     return relevant_data
 

@@ -101,6 +101,8 @@ def sdid_by_metric(metric) -> tuple[list[dict], dict]:
 
     return league_rows, weights
 
+
+# define some fct. as it is 3 times the same block
 sdid_points = sdid_by_metric("points")
 sdid_results_points = pd.DataFrame(sdid_points[0])
 sdid_weights_points = pd.DataFrame.from_dict(sdid_points[1], orient="index").fillna(0.0)
