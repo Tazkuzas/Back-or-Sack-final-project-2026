@@ -3,7 +3,8 @@ import pandas as pd
 import plotly.express as px
 import os
 
-data = pd.read_csv(os.path.join(os.getcwd(), "data/processed/team_games.csv"))
+data = pd.read_csv(os.path.join(os.getcwd(), "../../data/processed/team_games_manager.csv"))
+counterfactuals = pd.read_csv(os.path.join(os.getcwd(), "../../data/processed/round_counterfactuals.csv"))
 
 leagues = data["league"].unique().tolist()
 seasons = data["season"].unique().tolist()
@@ -102,6 +103,15 @@ with s3:
 club_data = season_data[season_data["team"] == club].copy()
 club_data["luck"] = club_data["points_vs_exp"].cumsum()
 
+season_counterfactuals = counterfactuals[counterfactuals["season"] == season].copy()
+club_counterfactuals = season_counterfactuals[season_counterfactuals["team"] == club].copy()
+
+treated_rounds = club_data.loc[club_data["treated"] == 1, "round"]
+if not treated_rounds.empty:
+    treatment_round = treated_rounds.min()
+else: 
+    treatment_round = 0
+
 number_of_teams = len(clubs)
 
 g1, g2 = st.columns(2)
@@ -119,3 +129,27 @@ with g2:
     luck_chart.add_hline(y=0)
     luck_chart.update_layout(xaxis_title="Matchday", yaxis_title="Points above or below expected")
     st.plotly_chart(luck_chart)
+
+st.subheader("Performance versus counterfactual")
+
+counterfactual_chart = px.line(club_data, x="round", y="cum_points", markers=True)
+counterfactual_chart.update_traces(name = "effective points", line=dict(color="blue", dash="dash"), marker=dict(color="blue"), showlegend=True)
+
+if treatment_round:
+    counterfactual_chart2 = px.line(club_counterfactuals, x="round", y="sdid_cum_points", markers=True)
+    counterfactual_chart2.update_traces(name = "counterfactual", line=dict(color="red", dash="dash"), marker=dict(color="red"), showlegend=True)
+    counterfactual_chart.add_hline(y=0)
+    counterfactual_chart.add_vline(
+        x=treatment_round,
+        line_width=2,
+        line_dash="dot",
+        line_color="green",
+        annotation_text="New head coach",
+        annotation_position="top right"
+    )
+
+    counterfactual_chart.add_traces(counterfactual_chart2.data)
+
+
+counterfactual_chart.update_layout(xaxis_title="Matchday", yaxis_title="Points")
+st.plotly_chart(counterfactual_chart)
